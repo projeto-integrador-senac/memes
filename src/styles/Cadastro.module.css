@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Nunito:wght@400;600;700&display=swap');
+
+
+.Container {
+  width: 100%;
+  margin: 0 auto;
+  
+}
+
+.Containerlogin {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: right;
+  padding: 15px;
+  background-image: linear-gradient(to top, #21d4fd -80%, #b721ff );
+}
+
+.Wraplogin {
+  height: 590px;
+  width:690px;
+  background-color: rgba(51, 51, 51, 0.671);
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 77px 55px 33px 55px;
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.loginform {
+  width: 100%;
+}
+
+.loginformtitle {
+  font-family: Nunito, sans-serif;
+  display: block;
+  font-size: 30px;
+  color: azure;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.loginformtitle img {
+  width: 90px;
+}
+
+.wrapinput {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  border-bottom: 2px solid #adadad;
+  margin-bottom: 37px;
+}
+
+.input {
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.2;
+  border: none;
+  display: block;
+  width: 100%;
+  height: 45px;
+  background-color: transparent;
+  padding: 0 5px;
+  font-family: Nunito, sans-serif;
+}
+
+.Focusinput {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  color: #adadad;
+  font-family: Nunito, sans-serif;
+}
+
+.Focusinput::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+  background: #6a7dfe;
+  color: #adadad;
+  background: -webkit-linear-gradient(to left, #21d4fd, #b721ff);
+  background: -o-linear-gradient(to left, #21d4fd, #b721ff);
+  background: -moz-linear-gradient(to left, #21d4fd, #b721ff);
+  background: linear-gradient(to left, #21d4fd, #b721ff);
+}
+
+.Focusinput::after {
+  font-family: Nunito, sans-serif;
+  font-size: 15px;
+  color:  #adadad;
+  line-height: 1.2;
+  content: attr(data-placeholder);
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 16px;
+  left: 0px;
+  padding-left: 5px;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.input:focus {
+  outline: 0;
+}
+
+.input:focus+.Focusinput::after {
+  top: -15px;
+}
+
+.input:focus+.Focusinput::before {
+  width: 100%;
+}
+
+.has-val+.Focusinput::after {
+  top: -15px;
+}
+
+.has-val+.Focusinput::before {
+  width: 100%;
+}
+
+.Containerloginformbtn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 13px;
+}
+.Loginformbtn {
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background: #6a7dfe;
+  transition: ease-in-out 0.5s;
+  background-image: linear-gradient(to left, #21d4fd, #b721ff, #b721ff, #21d4fd );
+  background-size:300%;
+    background-position: 0 0;
+    -webkit-appearance: none;
+}
+
+.Loginformbtn:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+  background-position: 100% 0;
+}
+
+.Textcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.Txt1 {
+  font-size: 14px;
+  color: #adadad;
+  line-height: 1.5;
+  padding-right: 5px;
+}
+
+.Txt2 {
+  font-size: 14px;
+  color: #6a7dfe;
+  line-height: 1.5;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.Imagem{
+  display: block;
+  font-family: Nunito, sans-serif;
+  font-size: 21px;
+  font-weight: bold;
+  flex-direction: column;
+  justify-content: left;
+  width: 35vw;
+  left: 10px;
+  top: 220px;
+  position: absolute;
+  color: #fff;
+}
+
+.fds{
+  transform: translateY(0px);
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(30px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}

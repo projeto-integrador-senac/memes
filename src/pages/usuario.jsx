@@ -1,12 +1,14 @@
 import React from 'react';
 import styles from '../styles/Usuario.module.css'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faArrowLeft} from "@fortawesome/free-solid-svg-icons"
 
 const Usuario = () => {
     return ( 
     <div className={styles.Menu}>
         <div className={styles.MenuUsuario}>
             <div className={styles.ButtonAlto} >
-                <button>voltar</button>
+                <button> <FontAwesomeIcon icon={faArrowLeft}/> </button>
                 <p>Nome do user</p>
             </div> 
             <div>
@@ -21,20 +23,22 @@ const Usuario = () => {
             <div className={styles.DescricaoUsuario}>
                 <p>descrição</p>
             </div>
-            <div className={styles.button}>
-                <button>Coleção p</button>
+            <div className={styles.butao}>
+                <div className={styles.button}>
+                    <button className={styles.button}>Coleção p</button>
+                </div>
+                <div className={styles.button}>
+                    <button className={styles.button}>Postagem</button>
+                </div>
+                <div className={styles.button}>
+                    <button className={styles.button}>Curtidos</button>
+                </div>
+                <div className={styles.button}>
+                    <button className={styles.button}>Comentátios feitos pelo user</button>
+                </div>
             </div>
-            <div className={styles.button}>
-                <button>Postagem</button>
-            </div>
-            <div className={styles.button}>
-                <button>Curtidos</button>
-            </div>
-            <div className={styles.button}>
-                <button>Comentátios feitos pelo user</button>
-            </div>
-            
         </div>
+       
     </div>
      );
 }

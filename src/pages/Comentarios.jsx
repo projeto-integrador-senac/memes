@@ -5,26 +5,28 @@ import {faArrowLeft} from "@fortawesome/free-solid-svg-icons";
 
 const Comentarios = () => {
     return ( 
-    <div className={styles.MenuFeed}>
-     <button className={styles.botaoVoltar}> <FontAwesomeIcon icon={faArrowLeft}/> </button>
-       <hr></hr>
-        <div className={styles.DescricaodoUser} >
-            <div className={styles.NmdouserEarroba}>
-                <p >Nome do user</p>
-                <p className={styles.arroba}>@user</p>
-            </div>
-            <div>
-                <div> 
-                    <img src='https://pbs.twimg.com/profile_images/1532112034871099392/QGRSRfSh_400x400.jpg' className={styles.FtoUsuario}/>
-                </div>
-            </div>
-        </div>
-
-        <div className={styles.Postagem}>  
-            <p>comentário do proprietário </p>
-            <img src='https://i.em.com.br/RWp3rirEmujT4if9HsjRMJfj1d0=/790x/smart/imgsapp.em.com.br/app/noticia_127983242361/2022/02/27/1348761/putin-alimenta-cachorro-com-a-cara-de-bolsonaro_1_38500.jpg' className={styles.Imgpostada}/>
-        </div>
-
+    <div >
+        <article className={styles.allbrowsers}>
+<article className={styles.voltar}>
+  <h1>Voltar</h1>
+</article>  
+  <article className={styles.browser}>
+	<div className={styles.conteudo}>
+  <img className={styles.imagem} src="https://pbs.twimg.com/profile_images/1518062210618171392/aw_TLDkC_400x400.jpg" />
+    <a className={styles.aa}>SCCP News</a>
+    <a className={styles.user}>@_sccpnews</a>
+  </div>
+    
+    <section className={styles.post}>
+      <p>
+        ⚫️⚪️ | O delegado Roberto Sahagoff confirmou que vai indiciar o Rafael Ramos por injúria racial 	contra Edenilson, até a próxima segunda-feira, mesmo com o laudo da perícia inconclusivo.
+        
+📰 | @sbt_sports</p>
+    </section>
+<img className={styles.imagemPost} src="https://pbs.twimg.com/media/FU02h3dWQAAb8EG?format=jpg&name=small" />
+  </article>
+  
+</article>
     </div>
     );
 }

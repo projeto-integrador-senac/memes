@@ -1,19 +1,40 @@
-
-.FotoCapa1{
-    height: 60px;
-    object-fit: cover;
-    border-radius: 100%;
-    cursor: pointer;
-    position: absolute;
-    margin-top: 0px;
-    margin-left: 20px;
-}
-.FotoMeme1{
-    height: 400px;
-    border: 20px;
+.botaoVoltar{
+    background-color:rgb(0, 0, 0);
+    color: white;
 }
 .MenuFeed{
     background: black;
-    color: aliceblue;
+    color: aliceblue;  
+    
+}
+.FtoUsuario{
+    height: 60px;
+    border-radius: 100%;
+    cursor: pointer;
+    margin-left: -90px;
+    margin-top: 10px;
+}
+.arroba{
+    color: gray;
+}
+.DescricaodoUser{
+    text-align: left;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+}
+.NmdouserEarroba{
+    margin-top: 55px;
+}
+.Imgpostada{
+    height: 200px;
+    border-radius: 10px;
+}
+
+.Postagem{
+    background-color: black;
+    margin-top: 20px;
+    /* margin-left: -100px; */
     justify-content: center;
+    border-radius: 10px;
+
 }

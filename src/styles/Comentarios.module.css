@@ -1,48 +1,65 @@
 .allbrowsers {
     margin: 0;
     background-color: lightgray;
-    height: 660px;
-    width: 700px;
+    height: 1020px;
+    width: 598px;
     font-family: arial;
-    margin-left: 110px;
-  }
+    margin-left: 330px;
+    border: 2px solid #2e3235;
+}
   
-  .voltar{
-  background-color: black;
+.voltar{
+  background-color: #000000;
   color: white;
-  padding: 5px;
-  }
+  padding: 19px 15px;
   
-  .allbrowsers > h1, .browser {
+}
+
+.icon{
+  color: white;
+  cursor: pointer;
+}
+
+.icon:hover{
+  color: #696e72;
+  border-radius: 20px;
+}
+
+  
+.voltar b{
+  margin-left: 35px;
+}
+
+.allbrowsers > h1, .browser {
     padding: 5px;
     
-  }
+}
   
-  .browser {
+.browser {
     background: black;
-    height: 960px
-  }
+    height: 960px;
+}
   
-  .imagem{
+.imagem{
         width: 50px;
         height: 50px;
         object-fit: cover;
         border-radius: 50%;
         cursor: pointer;
-  }
+}
   
-  .aa{
+.nome{
     position: absolute;
     margin-top:15px;
     margin-left: 5px;
     font-size: 15px;
     color: white;
     cursor: pointer;
-  }
+}
   
   
   
-  .aa:before {
+.nome:before {
     content: "";
     position: absolute;
     width: 100%;
@@ -55,16 +72,16 @@
     transform: scaleX(0);
     -webkit-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
-  }
+}
   
-  .aa:hover:before {
+.nome:hover:before {
     visibility: visible;
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
-  }
+}
   
   
-  .user{
+.user{
     position: absolute;
     margin-top: -10px;
     color: #696e72;
@@ -72,25 +89,54 @@
     margin-left: 52px; 
     cursor: pointer;
     display:none;
-  }
+}
   
-  .browser p{
+.browser p{
     margin-left: 50px;
     color: white;
-  }
+}
   
-  .post{
-       margin-top: 30px;
+.post{
+       margin-top: -19px;
       margin-left: -50px;
-  }
+}
   
-  .post p{
+.post p{
       font-size: 20px;
-  }
+}
+
+.link{
+  color: #0099ff;
+}
   
-  .imagemPost{
+.imagemPost{
       height: 650px;
-      width: 700px;
+      width: 598px;
       padding: 0;
-      margin-left: -5px;
-  }
+      border: 1px solid #2e3235;
+      margin-left: -7px;
+      cursor: pointer;
+}
+
+.data p{
+  color: #696e72;
+  font-size: 14px;
+  margin-left: 15px;
+}
+
+.hr{
+  margin-top: 10px;
+  width: 556px;
+  border: 1px solid #696e72;
+}
+
+.numerosPost{
+  color: #fff;
+  margin-left: 18px;
+}
+
+.numerosPost p{
+  margin-top: -38px;
+  font-size: small;
+  color: #696e72;
+}

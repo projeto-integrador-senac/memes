@@ -1,5 +1,6 @@
 import Menu from "../components/menu";
 import styles from '../styles/Index.module.css';
+import Link from 'next/dist/client/link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faHeart, 
@@ -19,16 +20,19 @@ const Inicio = () => {
   <div className={styles.imagem}>
   <img src="https://pbs.twimg.com/profile_images/1532112034871099392/QGRSRfSh_400x400.jpg"/>
   </div>
-    <h2>Paysandu<FontAwesomeIcon className={styles.checkbox} icon={faCheckCircle}/></h2>
+  <Link href="/usuario">
+    <h2>Paysandu<FontAwesomeIcon className={styles.checkbox} icon={faCheckCircle}/></h2></Link>
     <p className={styles.pp}>@Paysandu</p>
-    <div >
+    <Link href="/comentarios">
+    <div>
       <img className={styles.post} src="https://pbs.twimg.com/media/FUls1VgXoAAlpE5?format=jpg&name=small" />
-    </div>
+    </div></Link>
     <FontAwesomeIcon icon={faHeart} className={styles.heart}/>
-    <FontAwesomeIcon icon={faComment} className={styles.comment}/>
+    <Link href="/comentarios">
+    <FontAwesomeIcon icon={faComment} className={styles.comment}/></Link>
     <FontAwesomeIcon icon={faBookmark} className={styles.bookmark}/>
     <span className={styles.twheartbox}>
-    <input className={styles.checktool} type="checkbox" name="name" value=""/>
+       <input className={styles.checktool} type="checkbox" name="name" value=""/>
     <span className={styles.twheart}></span>
 </span>
   </article>

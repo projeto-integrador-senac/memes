@@ -1,3 +1,4 @@
+import React from 'react';
 import Menu from "../components/menu";
 import styles from '../styles/Index.module.css';
 import Link from 'next/dist/client/link';

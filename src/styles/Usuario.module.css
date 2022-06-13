@@ -3,7 +3,8 @@
     height: 600px;
     background-color: black;  
     margin-top: 30px;
-    color: azure;
+    color: rgb(255, 255, 255);
+    margin-left: 620px;
 }
 .FotoCapa{
     color: rgb(255, 255, 255);
@@ -26,7 +27,16 @@
     position: absolute;
     margin-top: 180px;
     margin-left:-560px ; 
-
+}
+.ButtonBaixo{
+    justify-content: space-between;
+    display: flex;
+    cursor: pointer;
+}
+.ButtonBaixo1:hover{
+    background: #7b7c7c;
+    border: #696e72;
+   
 }
 .Menu{
     display:flex ;
@@ -35,15 +45,30 @@
 .FundoMenu{
     background: black;
 }
-.ButtonAlto{
+.voltar{
+    background-color: #000000;
+    color: white;
+    padding: 19px 15px;
     display: flex;
-    justify-content: space-between;
-    background-color: black;
+    align-items: center;
 }
-.Button p{
+
+.icon{
+    color: white;
+    cursor: pointer;
+}
+
+.icon:hover{
+    color: #696e72;
+    border-radius: 20px;
+}
+  
+.p{
     position: relative;
-    left: -440px
+    padding-left: 8px;
+    color: #ffffff;
 }
+
 .button{
     display: flex;
     justify-content: space-around;
@@ -59,5 +84,6 @@
 .butao{
     display: flex;
     justify-content: space-between;
-
+    background: rgb(0, 0, 0);
+    color: white;
 }

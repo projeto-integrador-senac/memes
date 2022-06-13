@@ -13,7 +13,7 @@ const Login = (props) => {
 
     return ( 
       <>
-      <Menu cor="#299cb6" cor2="#299cb6" />
+      <Menu cor="#299cb6" cor2="#299cb6" margin="-20px" />
         <div className={styles.container}>
         <div className={styles.containerlogin}>
           <div className={styles.wraplogin}>

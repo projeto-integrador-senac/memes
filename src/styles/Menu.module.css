@@ -11,7 +11,9 @@
     height: 80px;
     width: 100%;
 }
-
+.ImgMg{
+    height: 69px;
+}
 .logo{
     display: inline-block;
     color: white;

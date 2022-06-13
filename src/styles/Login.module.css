@@ -25,6 +25,7 @@
   overflow: hidden;
   padding: 77px 55px 33px 55px;
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+  margin-right: 200px;
 }
 
 .loginform {
@@ -202,11 +203,13 @@
   top: 220px;
   position: absolute;
   color: #fff;
+  margin-left: 100px;
 }
 
 .fdss{
   transform: translateY(0px);
   animation: float 5s ease-in-out infinite;
+  height: 500px;
 }
 
 @keyframes float{

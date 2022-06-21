@@ -1,10 +1,11 @@
 .allbrowsers {
     margin: 0;
     padding: 5px;
-    background-color: lightgray;
+    background-color: transparent;
     width: 590px;
-    margin-left: 150px;
+    margin-left: 590px;
     margin-top: 30px;
+    overflow-y: hidden;
   }
 
 .heart{
@@ -96,6 +97,7 @@
   width: 100px;
   height: 100px;
   display: inline-block;
+  display: none;
 }
 
 .twheart {

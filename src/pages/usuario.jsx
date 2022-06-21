@@ -4,17 +4,18 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faArrowLeft} from "@fortawesome/free-solid-svg-icons"
 
-const Usuario = () => {
+const Usuario = (props) => {
     return ( 
 <>
+    <div style={{marginTop:  props.margin ?? '-581px'}} >
     <div className={styles.MenuUsuario}>
         <Link href='/'>
-        <article className={styles.voltar}>
+        <article  className={styles.voltar}>
             <FontAwesomeIcon className={styles.icon} icon={faArrowLeft} /><p className={styles.p}>Nome do user</p>
         </article>
         </Link>
 
-        <div>
+        <div >
             <img src='https://pbs.twimg.com/profile_banners/883709719558467584/1595184784/1500x500'className={styles.FotoCapa} />
             <img src='https://pbs.twimg.com/profile_images/1532112034871099392/QGRSRfSh_400x400.jpg'className={styles.FotoUser}/>
         </div>
@@ -48,6 +49,7 @@ const Usuario = () => {
             </article>
             </Link>
         </div>
+    </div>
     </div>
 </>
      );

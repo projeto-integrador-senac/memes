@@ -1,0 +1,80 @@
+.leftpane {
+    background: #15202b;
+    color: #fff;
+    min-height: 100vh;
+    
+  
+    .container {
+      position: fixed;
+      
+    }
+
+    header img{
+        height: 6.9em;
+        margin-top: 0.7em;
+        margin-bottom: 0.7em;
+        margin-left: 2em;
+        cursor: pointer;
+    }
+  
+    nav svg {
+      height: 1.3em;
+      margin-right: 0.9em;
+    }
+  
+    nav {
+      padding-left: 3.3em
+    }
+  
+    nav > *, button.more {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.3em;
+      font-weight: 500;
+      width: fit-content;
+      cursor: pointer;
+     
+  
+      span {
+        display: flex;
+        align-items: center;
+        height: 2.4em;
+        width: fit-content;
+        min-width: none;
+        padding: 0 0.7em;
+      }
+  
+      &:hover span {
+        color: #1da1f2;
+        border-radius: 1.5em;
+        background: #192734;
+      }
+    }
+  
+    nav .selected {
+      color: #1da1f2;
+    }
+  
+    button {
+      background: unset;
+      border: unset;
+    }
+  
+    button.tweet {
+      display: block;
+      background: #1da1f2;
+      color: #fff;
+      width: 14em;
+      height: 3em;
+      border-radius: 1.5em;
+      font-size: 1em;
+      margin-top: 0.5em;
+      margin-left: 3.7em;
+      cursor: pointer;
+  
+      &:hover {
+        background: #0f90e5;
+      }
+    }
+    
+  }

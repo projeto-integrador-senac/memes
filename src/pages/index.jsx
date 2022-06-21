@@ -19,9 +19,9 @@ const Inicio = () => {
 <article className={styles.allbrowsers}>
   <article className={styles.browser}>
   <div className={styles.imagem}>
-  <img src="https://pbs.twimg.com/profile_images/1532112034871099392/QGRSRfSh_400x400.jpg"/>
+  <img href="/perfil" src="https://pbs.twimg.com/profile_images/1532112034871099392/QGRSRfSh_400x400.jpg"/>
   </div>
-  <Link href="/usuario">
+  <Link href="/perfil">
     <h2>Paysandu<FontAwesomeIcon className={styles.checkbox} icon={faCheckCircle}/></h2></Link>
     <p className={styles.pp}>@Paysandu</p>
     <Link href="/comentarios">

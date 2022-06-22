@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
   return ( 
   <>
   <Head>
-      <link rel="icon" href="/images/3eacerta.ico" />
+      <link rel="icon" href="/images/3eacerta.ico" />      
   </Head>
   <Component {...pageProps} />
   </> 

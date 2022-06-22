@@ -10,7 +10,6 @@ import {
   } from "@fortawesome/free-regular-svg-icons";
   import {faCheckCircle} from "@fortawesome/free-solid-svg-icons"
 
-
 const Inicio = () => {
     return ( 
         <>
@@ -25,7 +24,7 @@ const Inicio = () => {
   </div>
   <Link href="/perfil">
     <h2>Paysandu<FontAwesomeIcon className={styles.checkbox} icon={faCheckCircle}/></h2></Link>
-    <p className={styles.pp}>@Paysandu</p>
+    <Link href="/perfil"><p className={styles.pp}>@Paysandu</p></Link>
     <Link href="/comentarios">
     <div>
       <img className={styles.post} src="https://pbs.twimg.com/media/FUls1VgXoAAlpE5?format=jpg&name=small" />
@@ -77,9 +76,11 @@ const Inicio = () => {
     <span className={styles.twheartbox}>
        <input className={styles.checktool} type="checkbox" name="name" value=""/>
     <span className={styles.twheart}></span>
+    
 </span>
-  </article>
 </article>
+</article>
+
 
         </>
      );

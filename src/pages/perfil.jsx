@@ -3,7 +3,7 @@ import { useState } from "react";
 import Usuario from '../components/usuario';
 import Link from 'next/dist/client/link';
 import { home, explore, bookmarks, lists, profile, more } from './api/icons_teste'
-import styles from '../styles/teste.module.scss'
+import styles from '../styles/Perfil.module.scss'
 
 const LeftPane = () => {
   return (

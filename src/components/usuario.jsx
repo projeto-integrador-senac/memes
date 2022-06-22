@@ -29,22 +29,34 @@ const Usuario = (props) => {
             <p>descrição</p>
         </div>
         <div className={styles.ButtonBaixo}>
-            <Link href='/'>
+            <Link href='#'>
             <article className={styles.ButtonBaixo1}>
                 <p>Comentários</p>
             </article>
             </Link>
-            <Link href='/'>
+            <Link href='#'>
             <article className={styles.ButtonBaixo1}>
                 <p>Postagens</p>
             </article>
             </Link>
-            <Link href='/'>
+            <Link href='#'>
             <article className={styles.ButtonBaixo1}>
                 <p>Curtidas</p>
             </article>
             </Link>
         </div>
+        </div>
+        <div className={styles.invisivel}>
+            <article className={styles.Comentario}>
+            <img src="https://pbs.twimg.com/profile_images/1532112034871099392/QGRSRfSh_400x400.jpg"/>
+                <h1 className={styles.ComentaNome}>User</h1>
+                <h1 className={styles.ComentaUser}>@user</h1>
+                <p className={styles.Comenta}>🔵 Torcida Fiel! ⚪
+
+O Papão da Curuzu está escalado para mais uma vitória, fique ligado nas notícias sobre o nosso Fan Token. Acesse agora o site https://paysandu.foottoken.com e a comunidade do telegram: https://t.me/PaysanduFanTokenNews
+
+@LunesPlatform</p>
+            </article>
         </div>
     </div>
     </div>

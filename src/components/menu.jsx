@@ -11,7 +11,7 @@ const Menu = (props) => {
     return ( 
         <>
             <header style={{
-            backgroundColor: props.cor ?? 'black'
+            backgroundColor: props.cor ?? '#bc67e0'
         }} className={styles.header}>
        
         <Link href="/"><div className={styles.logo}> <img className={styles.ImgMg}src="/images/icon.ico"/></div></Link>

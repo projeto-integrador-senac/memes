@@ -1,15 +1,15 @@
 import React from 'react';
 import { useState } from "react";
-import Usuario from './usuario';
+import Usuario from '../components/usuario';
 import Link from 'next/dist/client/link';
-import { home, explore, twitter, notifications, messages, bookmarks, lists, profile, more } from './api/icons_teste'
+import { home, explore, bookmarks, lists, profile, more } from './api/icons_teste'
 import styles from '../styles/teste.module.scss'
 
 const LeftPane = () => {
   return (
     <div className={styles.leftpane}>
       <div className={styles.container}>
-        <header><img className={styles.ImgMg}src="/images/icon.ico"/></header>
+        <header><Link href="/"><img className={styles.ImgMg}src="/images/icon.ico"/></Link></header>
 
         <nav>
           <Link href="/" activeClassName={styles.selected}>
@@ -41,7 +41,7 @@ const LeftPane = () => {
             <span>{more} Criadores</span>
           </button>
         
-        <Usuario cor="black"/>
+        <Usuario/>
 
         </nav>
       </div>

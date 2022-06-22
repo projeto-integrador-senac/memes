@@ -1,17 +1,23 @@
 .MenuUsuario{
     width: 600px;
     height: 600px;
-    background-color: black;  
+    background-color: #22092e;
+    border: 2px solid #2e3235;
     margin-top: 30px;
     color: rgb(255, 255, 255);
-    margin-left: 620px;
+    margin-left: 310px;
 }
 .FotoCapa{
-    color: rgb(255, 255, 255);
+    color: #fff;
     width: 100%;
-    margin-top: 30px;
       
 }
+
+.perfil{
+    display: grid;
+    margin-left: 10px;
+}
+
 .NomeUsuario{
     color: aliceblue;
 }
@@ -25,18 +31,19 @@
     border-radius: 100%;
     cursor: pointer;
     position: absolute;
-    margin-top: 180px;
+    margin-top: 150px;
     margin-left:-560px ; 
 }
 .ButtonBaixo{
-    justify-content: space-between;
     display: flex;
+    justify-content: space-around;
+    width: fit-content;
+    min-width: 100%;
     cursor: pointer;
 }
 .ButtonBaixo1:hover{
     background: #7b7c7c;
     border: #696e72;
-   
 }
 .Menu{
     display:flex ;
@@ -46,9 +53,9 @@
     background: black;
 }
 .voltar{
-    background-color: #000000;
+    background-color: #22092e;
     color: white;
-    padding: 19px 15px;
+    padding: 0px 15px;
     display: flex;
     align-items: center;
 }
@@ -59,15 +66,13 @@
 }
 
 .icon:hover{
-    color: #696e72;
-    border-radius: 20px;
+    color: #fff;
+    border-radius: 5px;
+    
+    background: #696e72;
 }
   
-.p{
-    position: relative;
-    padding-left: 8px;
-    color: #ffffff;
-}
+
 
 .button{
     display: flex;

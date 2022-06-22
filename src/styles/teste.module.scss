@@ -1,12 +1,15 @@
 .leftpane {
-    background: #15202b;
+    background: #22092e;
     color: #fff;
     min-height: 100vh;
+    
     
   
     .container {
       position: fixed;
-      
+      border: 2px solid #2e3235;
+      width: 400px;
+      height: 700px;
     }
 
     header img{
@@ -23,16 +26,19 @@
     }
   
     nav {
-      padding-left: 3.3em
+      padding-left: 3.3em;
     }
   
     nav > *, button.more {
       text-decoration: none;
       color: #fff;
+      display: grid;
       font-size: 1.3em;
       font-weight: 500;
-      width: fit-content;
-      cursor: pointer;
+      margin-left: -1em;
+      
+      
+      
      
   
       span {
@@ -40,14 +46,16 @@
         align-items: center;
         height: 2.4em;
         width: fit-content;
-        min-width: none;
+        min-width: 100%;
         padding: 0 0.7em;
+        cursor: pointer;
+        
       }
   
       &:hover span {
-        color: #1da1f2;
+        color: #ae00ff;
         border-radius: 1.5em;
-        background: #192734;
+        background: #341f3d;
       }
     }
   
@@ -70,7 +78,7 @@
       font-size: 1em;
       margin-top: 0.5em;
       margin-left: 3.7em;
-      cursor: pointer;
+      
   
       &:hover {
         background: #0f90e5;

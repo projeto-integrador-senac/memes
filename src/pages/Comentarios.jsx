@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/Comentarios.module.css';
+import styles from '../styles/Comentarios.module.scss';
 import Link from 'next/link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faArrowLeft} from "@fortawesome/free-solid-svg-icons";

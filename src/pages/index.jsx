@@ -1,6 +1,6 @@
 import React from 'react';
 import Menu from "../components/menu";
-import styles from '../styles/Index.module.css';
+import styles from '../styles/Index.module.scss';
 import Link from 'next/dist/client/link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -19,7 +19,9 @@ const Inicio = () => {
 <article className={styles.allbrowsers}>
   <article className={styles.browser}>
   <div className={styles.imagem}>
-  <img href="/perfil" src="https://pbs.twimg.com/profile_images/1532112034871099392/QGRSRfSh_400x400.jpg"/>
+  <Link href="/perfil">
+  <img src="https://pbs.twimg.com/profile_images/1532112034871099392/QGRSRfSh_400x400.jpg"/>
+  </Link>
   </div>
   <Link href="/perfil">
     <h2>Paysandu<FontAwesomeIcon className={styles.checkbox} icon={faCheckCircle}/></h2></Link>

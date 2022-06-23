@@ -1,5 +1,7 @@
 import React from 'react';
 import Menu from "../components/menu";
+import MenuLateral from "../components/menuLateral";
+import TopMemes from "../components/TopMemes";
 import styles from '../styles/Index.module.scss';
 import Link from 'next/dist/client/link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,6 +16,9 @@ const Inicio = () => {
     return ( 
         <>
             <Menu />
+            <MenuLateral/>
+            <TopMemes/>
+            
 
 <article className={styles.allbrowsers}>
   <article className={styles.browser}>
@@ -81,6 +86,7 @@ const Inicio = () => {
 </article>
 </article>
 
+      
 
         </>
      );

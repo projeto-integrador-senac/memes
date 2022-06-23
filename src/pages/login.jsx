@@ -13,13 +13,13 @@ const Login = (props) => {
 
     return ( 
       <>
-      <Menu cor="#299cb6" cor2="#299cb6" margin="-20px" />
+      <Menu cor="#299cb6" cor2="#299cb6" margin="-20px"/>
         <div className={styles.container}>
         <div className={styles.containerlogin}>
           <div className={styles.wraplogin}>
           <span className={styles.imagem}>
             <p>ENTRE E FAÇA MAIS "MEMES" MAIS OBRAS DE ARTE</p>
-               <img className={styles.fdss} src="/images/pintora.svg" />
+               <img className={styles.fdss} src="/images/pintora.svg"/>
             </span> 
             <form className={styles.loginform}>
               <span className={styles.loginformtitle}> Bem vindo </span>

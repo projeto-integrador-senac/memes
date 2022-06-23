@@ -1,0 +1,70 @@
+.contener{
+    margin-left: 1200px;
+    position: fixed;
+    margin-top: -20px;
+    text-align: center;
+}
+.caixa{
+    border-radius: 1px;
+    box-shadow: 7px 7px 13px 4px #7e7f81;
+    padding: 30px;
+    margin: 20px;
+    width: 350px;
+    height: 550px;
+    transition: ease-in-out 1s;
+}
+
+.caixa:hover{
+    box-shadow: 7px 7px 7px 4px #22b2f5;
+    color: #148bc2;
+}
+
+.div{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    display: grid;
+    font-size: 1.3em;
+    font-weight: 500;
+    margin-left: -1em;
+}
+
+.div1{
+  border: black 2px solid;
+  padding: 0.4em;
+  text-align: center;
+  height: 2.4em;
+  cursor: pointer;
+  transition: ease-out 1s;
+}
+
+.div1:hover{
+    transform: scale(1.05);
+}
+
+.div2{
+    border: black 2px solid;
+    padding: 0.4em;
+    text-align: center;
+    height: 2.4em;
+    margin-top: 3px;
+    cursor: pointer;
+    transition: ease-out 1s;
+  }
+  
+  .div2:hover{
+      transform: scale(1.05);
+  }
+
+  .div3{
+    border: black 2px solid;
+    padding: 0.4em;
+    text-align: center;
+    height: 2.4em;
+    margin-top: 3px;
+    cursor: pointer;
+    transition: ease-out 1s;
+  }
+  
+  .div3:hover{
+      transform: scale(1.05);
+  }

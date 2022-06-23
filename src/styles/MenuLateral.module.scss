@@ -1,12 +1,13 @@
 .leftpane {
-    background: #c188db;
-    color: #fff;
-    min-height: 100vh;
+    background: #22092e;
+    margin-top: 10px;
+    margin-left: 290px;
     
     
   
     .container {
       position: fixed;
+      
       width: 400px;
       height: 1000px;
     }
@@ -30,7 +31,7 @@
   
     nav > *, button.more {
       text-decoration: none;
-      color: rgb(0, 0, 0);
+      color: #000;
       display: grid;
       font-size: 1.3em;
       font-weight: 500;
@@ -54,7 +55,7 @@
       &:hover span {
         color: #ffffff;
         border-radius: 1.5em;
-        background:#bc67e0;
+        background: #bc67e0;
       }
     }
   
@@ -83,5 +84,7 @@
         background: #0f90e5;
       }
     }
-    
+    .RodaPe{
+      margin-left: 55px;
+    }
   }

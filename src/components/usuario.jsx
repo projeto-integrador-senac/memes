@@ -3,6 +3,7 @@ import styles from '../styles/Usuario.module.scss';
 import Link from 'next/link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faArrowLeft} from "@fortawesome/free-solid-svg-icons"
+import TopMemes from "../components/TopMemes";
 
 const Usuario = (props) => {
     return ( 
@@ -59,7 +60,9 @@ O Papão da Curuzu está escalado para mais uma vitória, fique ligado nas notí
             </article>
         </div>
     </div>
+    <TopMemes/>
     </div>
+
 </>
      );
 }

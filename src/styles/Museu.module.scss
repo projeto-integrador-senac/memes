@@ -1,0 +1,241 @@
+.body{
+    font-family: arial;
+    background: #ffffff;
+    margin: 0;
+    color: #148bc2;
+}
+
+
+.menu{
+    padding: 10px;
+    background: #22b2f5;
+    color: #fff;
+    font-size: 0.65em;
+    text-align: right;
+}
+
+.hr{
+    color: #22b2f5;
+}
+
+.text{
+    text-align: center;
+}
+
+.text p{
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: .03125rem;
+    overflow-wrap: break-word;
+}
+
+.conteudo{
+    display: flex;
+    justify-content: space-around;
+    scroll-behavior: smooth;
+}
+
+.caixa{
+    border-radius: 5px;
+    box-shadow: 7px 7px 13px 4px #7e7f81;
+    padding: 30px;
+    margin: 20px;
+    width: 350px;
+    height: 550px;
+    transition: ease-in-out 1s;
+    cursor: pointer;
+}
+
+.caixa:hover{
+    box-shadow: 7px 7px 13px 4px  #b721ff;
+    transform: scale(1.05);
+    color: #b721ff;
+}
+
+.caixa img{
+    width: 100%;
+    height: 250px;
+}
+
+.card{
+    text-align: center;
+   
+}
+
+.card button{
+    background: #22b2f5;
+    color: #fff;
+    border: none;
+    transition: ease-in-out 0.5s;
+    border-radius: 20px;
+    cursor: pointer;
+   padding: 10px;
+   margin: 10px
+}
+
+.card button:hover{
+    transform: scale(1.2);
+}
+
+.not{
+    margin: 15px;
+}
+
+.not h1{
+    color: #b721ff;
+}
+
+.texto{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    width: 900px;
+    margin-inline-start: 120px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    letter-spacing: .03125rem;
+    overflow-wrap: break-word;
+}
+
+.lista{
+    font-size: small;
+    margin-inline-start: 120px;
+}
+
+.rodape{
+    text-align: center;
+    color: #fff;
+    margin-bottom: -15px;
+    background: #b721ff;
+    font-size: 0.8em;
+}
+
+.escreva{
+    margin: 5px 15px;
+}
+
+.escritor{
+    margin: 20px;
+}
+/* lista */
+.listaNot ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.listaNot li{
+    background: #FFF;
+    border: 2px solid #22b2f5;
+    padding: 10px;
+}
+/* lista */
+
+/* Modal */
+.modal{
+    position: fixed; 
+    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 50%;
+    margin: auto;
+    z-index: 100;
+    width: 400px;
+    height: 200px;
+    background: #FFF;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #CCC;
+    border-radius: 10px;
+    display: none;
+    animation: modal .5s;
+}
+
+@keyframes modal{
+    from{
+        opacity: 0;
+        transform: translate3d(0px, -60px, 0px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 60, 60);
+    }
+}
+
+.modal div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal input{
+    width: 90%;
+    padding: 10px;
+    border: 1px solid rgb(110, 110, 110);
+    border-radius: 20px;
+    transition: ease-in-out 0.2s;
+}
+
+.modal input:hover{
+    border: 1px solid #22b2f5;
+    box-shadow: 2px 2px 2px #22b2f5;
+    transform: scale(1.03);
+}
+
+.modal button{
+    padding: 5px 20px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Modal */
+
+/* Botões */
+.salvar{
+    background: #8BC34A;
+    transition: ease-in-out 0.3s;
+    border-radius: 5px;
+}
+
+.salvar:hover{
+    background: #59ac00; 
+    box-shadow: 1px 2px 2px #88ff00;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.cancela{
+    background: #D32F2F;
+    transition: ease-in-out 0.3s;
+}
+
+.cancela:hover{
+    background: #ff0000; 
+    box-shadow: 3px 3px 3px  #b61313;
+    color: #fff;
+    transform: scale(1.05);
+}
+/* Botões */
+
+/* Fundo */
+.fundo{
+    display: none;
+    background: #000;
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0.8;
+}
+/* Fundo */
+
+/* Form Email */
+
+#m{
+    cursor: pointer;
+}

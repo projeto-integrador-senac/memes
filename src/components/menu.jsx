@@ -26,7 +26,7 @@ const Menu = (props) => {
 
         <nav className={styles.nav}>
             <ul className={styles.menu}>
-                        <li><a href="#">Top Memes</a></li>
+                        
                         <li><Link href="login">Login</Link> </li>
                         <li><b>/</b> </li>
                         <li><Link href="cadastro">Cadastro</Link></li>

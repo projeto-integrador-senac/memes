@@ -16,7 +16,7 @@ const MenuLateral = () => {
             <span>{home} Inicio</span>
             </button>
           </Link>
-          <Link href="/explore" activeClassName={styles.selected}>
+          <Link href="/#" activeClassName={styles.selected}>
           <button className="more">
             <span>{explore} Top Memes</span>
             </button>
@@ -26,9 +26,9 @@ const MenuLateral = () => {
             <span>{bookmarks} Galeria</span>
             </button>
           </Link>
-          <Link href="/lists" activeClassName={styles.selected}>
+          <Link href="/museu" activeClassName={styles.selected}>
           <button className="more">
-            <span>{lists} Museu dos Memes</span>
+            <span>{lists} História dos Memes</span>
           </button>
           </Link>
           <Link href="/perfil" activeClassName={styles.selected}>

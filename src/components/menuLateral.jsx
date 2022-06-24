@@ -43,7 +43,13 @@ const MenuLateral = () => {
         
         </nav>
 
-        <a className={styles.RodaPe}>© 2022 Meme's Gallerry, Inc.</a>
+        <div className={styles.RodaPe}>
+          <a>
+            © 2022 Meme's Gallerry, Inc.
+            <br></br>
+            |API | Idioma:Português (Brasil)          
+          </a>  
+        </div> 
         
       </div>
       

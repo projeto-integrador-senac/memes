@@ -16,7 +16,7 @@ const MenuLateral = () => {
             <span>{home} Inicio</span>
             </button>
           </Link>
-          <Link href="/#" activeClassName={styles.selected}>
+          <Link href="/top" activeClassName={styles.selected}>
           <button className="more">
             <span>{explore} Top Memes</span>
             </button>

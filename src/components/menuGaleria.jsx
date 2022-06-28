@@ -1,10 +1,6 @@
 import React from 'react';
 import Link from "next/link";
-import styles from '../styles/Menu.module.scss'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faSearch
-  } from "@fortawesome/free-solid-svg-icons";
+import styles from '../styles/MenuGaleria.module.scss'
 
 
 const Menu = (props) => {
@@ -16,12 +12,8 @@ const Menu = (props) => {
        
         <Link href="/"><div className={styles.logo}> <img className={styles.ImgMg}src="/images/icon.ico"/></div></Link>
         
-        <input className={styles.sidemenu} type="checkbox" id={styles.sidemenu}/>
-        <label className={styles.hamb} for={styles.sidemenu}><span className={styles.hambline}></span></label>
-        
         <div className={styles.div}> 
-            <input type="text" id={styles.txtBusca} placeholder="Buscar..." />
-            <FontAwesomeIcon id={styles.btnBusca} style={{marginLeft: props.margin ?? '790px;'}}  icon={faSearch}/>
+          <h1 id=''>GALERIA</h1>
          </div>
     </header>
         </>

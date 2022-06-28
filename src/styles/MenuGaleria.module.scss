@@ -35,7 +35,9 @@
 /* barra de pesquisa*/
 
 .div{
-   margin-top: -25px;
+  color: #ffffff;
+  margin-top: -90px;
+  margin-left: 650px;
 }
 
 #txtBusca{
@@ -59,75 +61,7 @@
 
 /* barra de pesquisa*/
 
-.menu a{
-    display: block;
-    padding: 30px;
-    color: white;
-}
-.menu a:hover{
-    background-color: gray;
-}
 
-.menu b{
-    display: block;
-    padding: 30px;
-    color: white;
-}
-.nav{
-    max-height: 0;
-    transition: max-height .5s ease-out;
-}
-
-.hamb{
-    cursor: pointer;
-    float: right;
-    padding: 40px 20px;
-}
-
-.hambline {
-    background: white;
-    display: block;
-    height: 2px;
-    position: relative;
-    width: 24px;
-
-} 
-
-.hambline::before,
-.hambline::after{
-    background: white;
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-}
-.hambline::before{
-    top: 5px;
-}
-.hambline::after{
-    top: -5px;
-}
-
-.sidemenu {
-    display: none;
-}
-
-.sidemenu:checked ~ nav{
-    max-height: 100%;
-}
-.sidemenu:checked ~ .hamb .hamb-line {
-    background: transparent;
-}
-.sidemenu:checked ~ .hamb .hamb-line::before {
-    transform: rotate(-45deg);
-    top:0;
-}
-.sidemenu:checked ~ .hamb .hamb-line::after {
-    transform: rotate(45deg);
-    top:0;
-}
 
 @media (min-width: 768px) {
     .nav{

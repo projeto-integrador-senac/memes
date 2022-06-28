@@ -1,20 +1,19 @@
-import styles from '../styles/Museu.module.scss'
+import styles from '../styles/Criadores.module.scss'
 import Link from 'next/dist/client/link';
 
 
-
-const Museu = () => {
+const Criadores = () => {
     return ( 
         <div >
+        
+        <Link href='/'>
+            <button className={styles.volta}>INÍCIO</button>
+        </Link>
 
-                <Link href='/'>
-                <button className={styles.volta}>INÍCIO</button>
-                </Link>
-            
                 <div className={styles.text}>
-            <h1 style={{color: '#980ada', fontSize: '50px'} }>HISTÓRIA DOS MEMES</h1>
+            <h1 style={{color: '#980ada', fontSize: '50px'} }>CRIADORES</h1>
 
-            <p>Saiba tudo sobre os memes</p>
+            <p>Saiba tudo sobre os criadores desse site</p>
             </div>   
 
             <hr width="80%"  className={styles.hr}/>
@@ -23,8 +22,8 @@ const Museu = () => {
         <div  className={styles.caixa}>
             <a href='#memes-?'>
                 <div  className={styles.card}> 
-                <img width="400px" src="https://t.ctcdn.com.br/RXx6_SJ1v9-w_E2UlD3a528OyIE=/i360801.png" alt="HTML"/>
-                <h1> O QUE SÃO MEMES? </h1>   
+                <img width="400px" src="/images/hudson.jpeg" alt="HTML"/>
+                <h1> HUDSON </h1>   
             </div>
             </a>
         </div>
@@ -34,7 +33,7 @@ const Museu = () => {
                 <a href='#impacto-memes'>
                 <div  className={styles.caixa}>
                 <img width="400px" src="https://i.pinimg.com/736x/4d/52/dd/4d52dd5d05128429831121caf456bfd3.jpg" alt="CSS"/>
-                <h1> IMPACTO DOS MEMES NA SOCIEDADE  </h1>
+                <h1> MURILO  </h1>
             </div>
             </a>
         </div>
@@ -43,7 +42,7 @@ const Museu = () => {
                 <a href='#memes-!'>
                 <div  className={styles.caixa}>
                 <img width="350px" src="https://i.pinimg.com/originals/9f/cf/02/9fcf0201af14764ced3ac28c28442cf6.png" alt="JavaScript"/>
-                <h1> COMO MEMES SÃO CONSIDERADOS MEMES  </h1>
+                <h1> RONEY  </h1>
                 </div>
                 </a>
         </div>
@@ -52,7 +51,7 @@ const Museu = () => {
                 <a href='#meme-n-1'>
                 <div  className={styles.caixa}>
                 <img width="350px" src="https://64.media.tumblr.com/7ee8881c7e82ebe873831d21f1731474/tumblr_mzv5fh4PqF1t17f6qo1_400.gifv" alt="JavaScript"/>
-                <h1> QUAL O PRIMEIRO MEME  </h1>
+                <h1> SUSANE  </h1>
                 </div>
                 </a>
         </div>
@@ -62,7 +61,7 @@ const Museu = () => {
 
         <div className={styles.texto}>
         <div  className={styles.not}>
-            <h1 id='memes-?'>O QUE SÃO MEMES</h1>
+            <h1 id='memes-?'>HUDSON</h1>
             <p>É comum nos dias de hoje se deparar com um meme pelo menos uma vez ao decorrer do dia, através de alguma rede social ou em uma conversa com amigos, seja uma foto, vídeo, gif, figurinha, ou até mesmo uma frase que remete a algo que foi viral em algum ponto. 
 
 Mas afinal, o que são memes? 
@@ -138,4 +137,4 @@ No entanto, existe uma certa concordância no que diz respeito ao primeiro meme 
      );
 }
  
-export default Museu;
+export default Criadores;

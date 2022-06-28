@@ -36,10 +36,11 @@ const MenuLateral = () => {
             <span>{profile} Perfil</span>
         </button>
           </Link>
+          <Link href="/criadores" activeClassName={styles.selected}>
           <button className="more">
             <span>{more} Criadores</span>
           </button>
-        
+          </Link>
         
         </nav>
 

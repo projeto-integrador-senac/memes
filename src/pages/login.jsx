@@ -7,6 +7,48 @@ import Menu from '../components/menu';
 
 const Login = (props) => {
 
+  const axios = require('axios').default;
+
+
+  const autenticaUsuario = (e) => {
+
+    e.preventDefault()
+
+    const nome_usuario = document.getElementById("inputNickName").value;
+    const senha = document.getElementById("inputSenha").value;
+    
+    const obj = {
+        nome_usuario : nome_usuario,
+        senha : senha
+    }
+
+    if(obj.nome_usuario.trim() == ""){
+        alert("Nome usuario não encontrado.")
+        
+    }
+    
+    if(obj.senha.trim() == ""){
+        alert("Senha incorreta")
+        
+    }
+
+    axios.post('http://localhost:3001/autentica', obj)
+
+    .then(function (response) {
+
+        console.log(response.status == 200)
+
+alert("Bem Vindo")
+
+    })
+
+    .catch(function (error) {
+
+alert("Criar Conta")
+
+    })  
+  }
+
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -21,27 +63,25 @@ const Login = (props) => {
             <p>ENTRE E FAÇA MAIS "MEMES" MAIS OBRAS DE ARTE</p>
                <img className={styles.fdss} src="/images/pintora.svg"/>
             </span> 
-            <form className={styles.loginform}>
+            <form className={styles.loginform} onSubmit={(e) => autenticaUsuario(e)}>
               <span className={styles.loginformtitle}> Bem vindo </span>
   
              <br></br>
   
               <div className={styles.wrapinput}>
                 <input
-                  className={email !== "" ? "has-val input" : styles.input}
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  className={styles.input}
+                  type="text"
+                  id='inputNickName'
                 />
-                <span className={styles.focusinput} data-placeholder="Email ou User"></span>
+                <span className={styles.focusinput} data-placeholder="Nome de Usuário"></span>
               </div>
   
               <div className={styles.wrapinput}>
                 <input
-                  className={password !== "" ? "has-val input" : styles.input}
+                  className={styles.input}
                   type="password"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  id='inputSenha'
                 />
                 <span className={styles.focusinput} data-placeholder="Senha"></span>
               </div>

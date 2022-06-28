@@ -11,7 +11,7 @@ const Criadores = () => {
         </Link>
 
                 <div className={styles.text}>
-            <h1 style={{color: '#980ada', fontSize: '50px'} }>CRIADORES</h1>
+            <h1 style={{color: '#157e8f', fontSize: '50px'} }>CRIADORES</h1>
 
             <p>Saiba tudo sobre os criadores desse site</p>
             </div>   

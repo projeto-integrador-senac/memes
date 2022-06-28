@@ -15,10 +15,11 @@
     height: 50px;
     width: 100px;
     font-size: 18px;
+    background: transparent;
 }
 
 .volta:hover{
-    background: #b721ff;
+    background: #2084d8;
     color: #fff;
 }
 
@@ -65,9 +66,9 @@
 }
 
 .caixa:hover{
-    box-shadow: 7px 7px 13px 4px  #b721ff;
+    box-shadow: 7px 7px 13px 4px  #20a6d8;
     transform: scale(1.05);
-    color: #b721ff;
+    color: #20a6d8;
 }
 
 .caixa img{
@@ -77,6 +78,7 @@
 
 .card{
     text-align: center;
+    color: #157e8f;
    
 }
 
@@ -100,7 +102,7 @@
 }
 
 .not h1{
-    color: #b721ff;
+    color: #157e8f;
 }
 
 .texto{
@@ -125,7 +127,7 @@
     text-align: center;
     color: #fff;
     margin-bottom: -15px;
-    background: #b721ff;
+    background: #157e8f;
     font-size: 0.8em;
 }
 

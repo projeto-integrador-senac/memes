@@ -12,7 +12,7 @@ const Museu = () => {
                 </Link>
             
                 <div className={styles.text}>
-            <h1 style={{color: '#980ada', fontSize: '50px'} }>HISTÓRIA DOS MEMES</h1>
+            <h1 style={{color: '#157e8f', fontSize: '50px'} }>HISTÓRIA DOS MEMES</h1>
 
             <p>Saiba tudo sobre os memes</p>
             </div>   

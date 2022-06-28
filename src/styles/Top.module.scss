@@ -1,130 +1,130 @@
 .allbrowsers {
-    margin: 0;
-    padding: 5px;
-    background-color: #9ba3ec;
-    width: 590px;
-    margin-left: 590px;
-    margin-top: 10px;
-    overflow-y: hidden;
-  }
+  margin: 0;
+  padding: 5px;
+  background-color: #20a6d8;
+  width: 590px;
+  margin-left: 590px;
+  margin-top: 10px;
+  overflow-y: hidden;
+}
 
 .heart{
-      color: #000000;
-      cursor: pointer;
-      height: 3vh;
-      margin-left: -490px;
-      margin-top: 610px;
-}
-.comment{
     color: #000000;
     cursor: pointer;
     height: 3vh;
+    margin-left: -490px;
     margin-top: 610px;
-    margin-left: 20px;
+}
+.comment{
+  color: #000000;
+  cursor: pointer;
+  height: 3vh;
+  margin-top: 610px;
+  margin-left: 20px;
 }
 
 .bookmark{
-    color: #000000;
-    cursor: pointer;
-    height: 3vh;
-    margin-top: 610px;
-    margin-left: 380px;
+  color: #000000;
+  cursor: pointer;
+  height: 3vh;
+  margin-top: 610px;
+  margin-left: 380px;
 }
 
 .checkbox{
-  color: #0076fd;
-  display: grid;
-  left: 70px;
-  margin-inline-start: 65px;
-  margin-top: -15px;
+color: #0076fd;
+display: grid;
+left: 70px;
+margin-inline-start: 65px;
+margin-top: -15px;
 }
 
-  
+
 .allbrowsers > h1, .browser {
-    margin: 10px;
-    padding: 5px;
+  margin: 10px;
+  padding: 5px;
 }
-  
+
 .browser {
-    background: white;
-    height: 770px;
-    width: 500px;
-    display: flex;
-    margin-left: 35px;
-    border-radius: 10px;
+  background: white;
+  height: 770px;
+  width: 500px;
+  display: flex;
+  margin-left: 35px;
+  border-radius: 10px;
 }
-  
+
 .browser p {
-    margin: 4px;
-    font-size: 75%;
-    margin-top:18px;
+  margin: 4px;
+  font-size: 75%;
+  margin-top:18px;
 }
 
 .pp{
-  position: relative;
-  left: -90px;
+position: relative;
+left: -90px;
 }
-  
+
 .browser h2 {
-    margin: 4px;
-    font-size: 90%;
-    margin-top:1px;
+  margin: 4px;
+  font-size: 90%;
+  margin-top:1px;
+  cursor: pointer;
+}
+
+
+.imagem img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
     cursor: pointer;
 }
 
-  
-.imagem img{
-      width: 50px;
-      height: 50px;
-      object-fit: cover;
-      border-radius: 50%;
-      cursor: pointer;
-}
-  
 .post{
-      width: 500px;
-      height: 550px;
-      display: flex;
-      margin-top: 55px;
-      margin-left: -212px;
-      cursor: pointer;
+    width: 500px;
+    height: 550px;
+    display: flex;
+    margin-top: 55px;
+    margin-left: -212px;
+    cursor: pointer;
 }
 
 /*CORAÇÃO ANIMADO*/
 
 .twheartbox {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  display: inline-block;
-  display: none;
+position: relative;
+width: 100px;
+height: 100px;
+display: inline-block;
+display: none;
 }
 
 .twheart {
-  background: url(http://i.imgur.com/zw8ahUb.png) no-repeat 0 0;
-  display: inline-block;
-  width: inherit;
-  height: inherit;
-  position: absolute;
-  left: 0;
-  top: 0;
+background: url(http://i.imgur.com/zw8ahUb.png) no-repeat 0 0;
+display: inline-block;
+width: inherit;
+height: inherit;
+position: absolute;
+left: 0;
+top: 0;
 
 }
 
 .checktool:checked +.twheart {
-  transition: background .8s steps(28);
-  background-position: -2800px 0;
+transition: background .8s steps(28);
+background-position: -2800px 0;
 }
 
 .checktool{
-  opacity: 0;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  width: 100vh;
-  height: inherit;
-  background-color: #000000;
-  color: #000000;
+opacity: 0;
+cursor: pointer;
+top: 0;
+left: 0;
+width: 100vh;
+height: inherit;
+background-color: #000000;
+color: #000000;
 }
 
 /*CORAÇÃO ANIMADO*/

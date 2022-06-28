@@ -1,6 +1,6 @@
 .leftpane {
-    background: #b682af;
-    color: rgb(0, 0, 0);
+    background: #c3efed;
+    color: rgb(252, 252, 252);
     min-height: 100vh;
     
     
@@ -54,7 +54,7 @@
       &:hover span {
         color: #ffffff;
         border-radius: 1.5em;
-        background:#bc67e0;
+        background:#2084d8;
       }
     }
   
@@ -82,6 +82,13 @@
       &:hover {
         background: #0f90e5;
       }
+
+      
+    }
+    .RodaPe{
+      margin-top: -140px;
+      margin-left: 5px;
+      font-size: 11px;
     }
     
   }

@@ -4,11 +4,11 @@ import Link from 'next/dist/client/link';
 import { home, explore, bookmarks, lists, profile, more } from '../pages/api/icons_teste'
 import styles from '../styles/MenuLateral.module.scss'
 
-const MenuLateral = () => {
+const MenuLateral = (props) => {
   return (
     <div className={styles.leftpane}>
       <div className={styles.container}>
-        
+      <header style={{display: props.img ?? 'none'}} ><Link href="/"><img className={styles.ImgMg}src="/images/icon.ico"/></Link></header>
 
         <nav>
           <Link href="/" activeClassName={styles.selected}>

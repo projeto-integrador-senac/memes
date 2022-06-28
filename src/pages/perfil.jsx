@@ -17,7 +17,7 @@ const LeftPane = () => {
             <span>{home} Inicio</span>
             </button>
           </Link>
-          <Link href="/explore" activeClassName={styles.selected}>
+          <Link href="/top" activeClassName={styles.selected}>
           <button className="more">
             <span>{explore} Top Memes</span>
             </button>
@@ -27,7 +27,7 @@ const LeftPane = () => {
             <span>{bookmarks} Galeria</span>
             </button>
           </Link>
-          <Link href="/lists" activeClassName={styles.selected}>
+          <Link href="/museu" activeClassName={styles.selected}>
           <button className="more">
             <span>{lists} Museu dos Memes</span>
           </button>
@@ -37,11 +37,20 @@ const LeftPane = () => {
             <span>{profile} Perfil</span>
         </button>
           </Link>
+          <Link href="/criadores" activeClassName={styles.selected}>
           <button className="more">
             <span>{more} Criadores</span>
           </button>
-        
+          </Link>
         <Usuario/>
+
+        <div className={styles.RodaPe}>
+          <a>
+            © 2022 Meme's Gallerry, Inc.
+            <br></br>
+            |API | Idioma:Português (Brasil)          
+          </a>  
+        </div>
 
         </nav>
       </div>

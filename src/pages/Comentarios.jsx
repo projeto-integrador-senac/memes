@@ -3,10 +3,17 @@ import styles from '../styles/Comentarios.module.scss';
 import Link from 'next/link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faArrowLeft} from "@fortawesome/free-solid-svg-icons";
+import MenuLateral from '../components/menuLateral';
+import TopMemes from '../components/TopMemes';
+
 
 const Comentarios = () => {
     return ( 
     <>
+    <MenuLateral img='block' />
+    <TopMemes/>
+
+
 <article className={styles.allbrowsers}>
           <Link href="/">
             <article className={styles.voltar}>

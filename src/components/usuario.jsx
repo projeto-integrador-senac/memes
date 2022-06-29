@@ -16,15 +16,17 @@ const Usuario = (props) => {
         </article>
         </Link>
 
-        <div >
-            <img src='https://pbs.twimg.com/profile_banners/883709719558467584/1595184784/1500x500'className={styles.FotoCapa} />
+        <div>
+            
             <img src='https://pbs.twimg.com/profile_images/1532112034871099392/QGRSRfSh_400x400.jpg'className={styles.FotoUser}/>
         </div>
         <br></br>
         <div className={styles.perfil}> 
         <div className={styles.NomeUsuario}>
             <h1>nome do user</h1>
+            <div className={styles.NomeUser}>
             <p>@do user</p>
+            </div>
         </div>
         <div className={styles.DescricaoUsuario}>
             <p>descrição</p>
@@ -60,7 +62,7 @@ O Papão da Curuzu está escalado para mais uma vitória, fique ligado nas notí
             </article>
         </div>
     </div>
-    <TopMemes/>
+   
     </div>
 
 </>

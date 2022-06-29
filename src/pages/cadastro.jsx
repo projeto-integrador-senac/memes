@@ -52,7 +52,7 @@ const Cadastro = () => {
 
         .then(function (response) {
 
-            //console.log(response.status == 200)
+            console.log(response.status == 200)
 
 alert("cadastro feito com sucesso")
 

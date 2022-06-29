@@ -22,23 +22,16 @@ const Login = (props) => {
         senha : senha
     }
 
-    if(obj.nome_usuario.trim() == ""){
-        alert("Nome usuario não encontrado.")
-        
-    }
-    
-    if(obj.senha.trim() == ""){
-        alert("Senha incorreta")
-        
-    }
+    /*if(obj.nome_usuario.trim() == "" && obj.senha.trim() == ""){alert("Nome ou senha incorreto.")}*/
 
     axios.post('http://localhost:3001/autentica', obj)
 
     .then(function (response) {
 
         console.log(response.status == 200)
+        if(response.data == 0){
 
-alert("Bem Vindo")
+alert("Usuário ou senha incorreto")} else{ alert("Bem-vindo")}
 
     })
 

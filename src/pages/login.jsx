@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from 'next/dist/client/link';
 import styles from '../styles/Login.module.scss'
 import Menu from '../components/menu';
+import Swal from 'sweetalert2';
 
 
 const Login = (props) => {
@@ -31,13 +32,26 @@ const Login = (props) => {
         console.log(response.status == 200)
         if(response.data == 0){
 
-alert("Usuário ou senha incorreto")} else{ alert("Bem-vindo")}
+          Swal.fire({
+            icon: 'error',
+            title: 'Opa!!',
+            text: 'Usuário ou senha incorreto',
+          })} else{ Swal.fire({
+            icon: 'success',
+            title: 'Bem Vindo!!',
+            showConfirmButton: false,
+            timer: 1500
+          })}
 
     })
 
     .catch(function (error) {
 
-alert("Criar Conta")
+      Swal.fire({
+        icon: 'error',
+        title: 'Opa!!',
+        text: 'Usuário ou senha não encontrados',
+      })
 
     })  
   }

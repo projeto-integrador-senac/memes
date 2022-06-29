@@ -41,7 +41,11 @@ const MenuLateral = (props) => {
             <span>{more} Criadores</span>
           </button>
           </Link>
-        
+          <Link href="/" activeClassName={styles.selected}>
+          <button className="more">
+            <span>{home} Postagem</span>
+            </button>
+          </Link>
         </nav>
 
         <div className={styles.RodaPe}>

@@ -62,24 +62,13 @@ const Criadores = () => {
         <div className={styles.texto}>
         <div  className={styles.not}>
             <h1 id='memes-?'>HUDSON</h1>
-            <p>É comum nos dias de hoje se deparar com um meme pelo menos uma vez ao decorrer do dia, através de alguma rede social ou em uma conversa com amigos, seja uma foto, vídeo, gif, figurinha, ou até mesmo uma frase que remete a algo que foi viral em algum ponto. 
-
-Mas afinal, o que são memes? 
-
-“Meme” é um termo que vem do grego, mimema, que significa imitação, primeiramente introduzido por Richard Dawkins em 1976 em seu livro “The selfish gene” (O gene egoísta).  
-
-Em seu livro, Dawkins, concebeu memes como um paralelo cultural aos genes biológicos e os considerou uma forma semelhante aos genes "egoístas", como estar no controle de sua própria reprodução e, assim, servir a fins próprios. A partir disso, definiu memes como ideias que carregam informações que são replicadas, e transmitidas de uma pessoa para outra possuindo a capacidade de evoluir e mutar aleatoriamente. 
-
-Entretanto, para Limor Shifman, professora de comunicação e jornalismo na Universidade Hebraica de Jerusalém e autora do livro “Memes in the Digital Culture” (Memes na cultura digital), esse conceito de memes, apesar de fazer sentido não mantem mais a capacidade de definir o que são memes nos tempos modernos. Para ela existe uma definição geral do que memes são, uma ideia que se espalha dentro de uma cultura, mas essa definição não ajuda a decidir o que são memes e o que não são no mundo de hoje. 
-
-Desta forma, podemos concluir que memes possuem uma definição subjetiva derivada de ideias.  
-
-Para Marcus em sua apresentação no TEDTalk em 2017, memes podem ser definidos como uma forma para pessoas se expressarem ou compartilharem algo de forma artística, original e divertida. São ideias que representam muitas coisas como linguagem, emoção, identidade cultura, história, memoria, comunidade, hobbies, relacionamentos, vida real e algumas vezes nada. Contudo, apesar da mensagem que o meme pretende passar, ou não passar, memes são ideias que valem a pena serem espalhadas. </p>
-            <div id="listaNot"  className={styles.listaNot}> </div>
+            <p>  </p>
+                
+                <div id="listaNot"  className={styles.listaNot}> </div>
         </div>
 
         <div  className={styles.not}>
-            <h1 id='impacto-memes'>IMPACTO DOS MEMES NA SOCIEDADE</h1>
+            <h1 id='impacto-memes'>MURILO</h1>
             <p>Partindo do princípio de que memes são uma forma dos seres humanos expressarem ideias, opiniões e emoções, então é possível afirmar que são reflexos da sociedade em que o ser humano está inserido. A mensagem de um meme pode ir de uma lembrança particular que faz o criador do meme sentir vergonha a algo relacionado a filmes ou livros que um grupo de pessoas específicos se identificam.  
 
 Iris Duong (2017) se refere a memes como simples, sucintos e explícitos em suas mensagens, sendo de fácil e rápida acessibilidade, capaz de alcançar um grande público em poucos minutos, podendo assim, ser usados como ferramentas de propaganda que podem facilmente convencer e consolidar crenças que rapidamente se tornam populares entre os cibernautas.  

@@ -5,7 +5,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faArrowLeft} from "@fortawesome/free-solid-svg-icons"
 import TopMemes from "../components/TopMemes";
 
+
 const Usuario = (props) => {
+
+    const axios = require('axios').default;
+
+
+
+
     return ( 
 <>
     <div style={{marginTop:  props.margin ?? '-481px'}} >

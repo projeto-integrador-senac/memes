@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from 'next/dist/client/link';
 import { home, explore, bookmarks, lists, profile, more, messages } from '../pages/api/icons_teste'
 import styles from '../styles/MenuLateral.module.scss'
+import Postagem from './postagem';
 
 const MenuLateral = (props) => {
   return (
@@ -38,9 +39,13 @@ const MenuLateral = (props) => {
           </Link>
         </nav>
         
-        <Link href="/postagem" activeClassName={styles.selected}>
-        <button className={styles.tweet}>Postar</button>
-        </Link>
+        localStorage.id... ? postar : Faça o login para
+
+
+        <button onClick={Postagem} className={styles.tweet}>Postar</button>
+        
+
+        <Postagem/>
 
         <div className={styles.RodaPe}>
           <a>

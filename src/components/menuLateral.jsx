@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from "react";
 import Link from 'next/dist/client/link';
-import { home, explore, bookmarks, lists, profile, more } from '../pages/api/icons_teste'
+import { home, explore, bookmarks, lists, profile, more, messages } from '../pages/api/icons_teste'
 import styles from '../styles/MenuLateral.module.scss'
 
 const MenuLateral = (props) => {
@@ -14,11 +14,6 @@ const MenuLateral = (props) => {
           <Link href="/" activeClassName={styles.selected}>
           <button className="more">
             <span>{home} Inicio</span>
-            </button>
-          </Link>
-          <Link href="/top" activeClassName={styles.selected}>
-          <button className="more">
-            <span>{explore} Top Memes</span>
             </button>
           </Link>
           <Link href="/galeria" activeClassName={styles.selected}>
@@ -41,12 +36,11 @@ const MenuLateral = (props) => {
             <span>{more} Criadores</span>
           </button>
           </Link>
-          <Link href="/" activeClassName={styles.selected}>
-          <button className="more">
-            <span>{home} Postagem</span>
-            </button>
-          </Link>
         </nav>
+        
+        <Link href="/postagem" activeClassName={styles.selected}>
+        <button className={styles.tweet}>Postar</button>
+        </Link>
 
         <div className={styles.RodaPe}>
           <a>

@@ -68,16 +68,17 @@
       border: unset;
     }
   
-    button.tweet {
+    button.tweet{
       display: block;
       background: #1da1f2;
       color: #fff;
       width: 14em;
       height: 3em;
+      cursor: pointer;
       border-radius: 1.5em;
       font-size: 1em;
       margin-top: 0.5em;
-      margin-left: 3.7em;
+      margin-left: 2.5em;
       
   
       &:hover {

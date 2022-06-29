@@ -1,5 +1,6 @@
 import styles from '../styles/Criadores.module.scss'
 import Link from 'next/dist/client/link';
+import Postagem from '../components/postagem';
 
 
 const Criadores = () => {
@@ -9,7 +10,7 @@ const Criadores = () => {
         <Link href='/'>
             <button className={styles.volta}>INÍCIO</button>
         </Link>
-
+        <Postagem/>
                 <div className={styles.text}>
             <h1 style={{color: '#157e8f', fontSize: '50px'} }>CRIADORES</h1>
 
@@ -123,6 +124,8 @@ No entanto, existe uma certa concordância no que diz respeito ao primeiro meme 
         </div>
         
         </div>
+
+        
      );
 }
  

@@ -62,7 +62,8 @@
 
 .pp{
   position: relative;
-  left: -90px;
+  left: -1px;
+  top: -20px;
 }
   
 .browser h2 {
@@ -78,16 +79,25 @@
       height: 50px;
       object-fit: cover;
       border-radius: 50%;
-      cursor: pointer;
+     cursor: pointer;
 }
   
 .post{
       width: 500px;
-      height: 550px;
-      display: flex;
+      display: grid;
+      justify-content: center;
       margin-top: 55px;
-      margin-left: -212px;
+      margin-left: -118px;
       cursor: pointer;
+      border: #0076fd 2px solid;
+}
+
+.post img{
+  max-width: 500px;
+  min-width: 500px;
+  height: 550px;
+  border: #fd0000 2px solid;
+  
 }
 
 /*CORAÇÃO ANIMADO*/

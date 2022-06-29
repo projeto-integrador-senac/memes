@@ -8,6 +8,13 @@ import {
 
 
 const Menu = (props) => {
+
+const [iduser, alteraIduser] = React.useState(null)
+React.useEffect(() => {
+    alteraIduser(localStorage.getItem("iduser"))
+}, [])
+
+
     return ( 
         <>
             <header style={{
@@ -26,10 +33,14 @@ const Menu = (props) => {
 
         <nav className={styles.nav}>
             <ul className={styles.menu}>
-                        
+                        { iduser ? 
+                        <button>sair</button> : 
+                        <>
                         <li><Link href="login">Login</Link> </li>
                         <li><b>/</b> </li>
                         <li><Link href="cadastro">Cadastro</Link></li>
+                        </>
+                        }
             </ul>
         </nav>
     </header>

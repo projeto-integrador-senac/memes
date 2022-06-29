@@ -65,19 +65,23 @@ const Inicio = () => {
                       <img src="https://pbs.twimg.com/profile_images/1532112034871099392/QGRSRfSh_400x400.jpg"/>
                       </Link>
                     </div>
-                    <Link href="/perfil">
-                    <h2>{u.Nome}<FontAwesomeIcon className={styles.checkbox} icon={faCheckCircle}/></h2></Link>
-                    <Link href="/perfil"><p className={styles.pp}>@{u.UserName}</p></Link>
-                     <div>
-                      <p> {u.descricao} </p>
+					<div>
+						<Link href="/perfil">
+						<h2>{u.Nome}</h2></Link>
+                    	<p className={styles.pp}>@{u.UserName}</p> 
                     </div>
-                    <Link href={{ pathname: "/comentarios/", query:{ id_usuario: u.ID} }}>
-                    <div>
-                      <img className={styles.post} src={`${u.PUBLICACAO}`} />
-                    </div></Link>
+                     <div>
+                    	
+                    </div>
+                    <div className={styles.post}>
+                    	<Link href={{ pathname: "/comentarios/", query:{ id_usuario: u.ID} }}>
+                    		
+							<img src={`${u.PUBLICACAO}`} />
+                    	</Link> 
+                    </div>
                     <FontAwesomeIcon icon={faHeart} className={styles.heart}/>
-                    <Link href="/comentarios">
-                    <FontAwesomeIcon icon={faComment} className={styles.comment}/></Link>
+                   
+                    <FontAwesomeIcon onClick={"/comentarios"} icon={faComment} className={styles.comment}/>
                     <FontAwesomeIcon icon={faBookmark} className={styles.bookmark}/>
                       <span className={styles.twheartbox}>
                         <input className={styles.checktool} type="checkbox" name="name" value=""/>

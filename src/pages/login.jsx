@@ -1,14 +1,16 @@
 import React from 'react';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from 'next/dist/client/link';
 import styles from '../styles/Login.module.scss'
 import Menu from '../components/menu';
 import Swal from 'sweetalert2';
+import  Router  from 'next/dist/client/router';
 
 
 const Login = (props) => {
 
   const axios = require('axios').default;
+  
 
 
   const autenticaUsuario = (e) => {
@@ -29,19 +31,20 @@ const Login = (props) => {
 
     .then(function (response) {
 
-        console.log(response.status == 200)
+        console.log(response)
         if(response.data == 0){
 
           Swal.fire({
             icon: 'error',
-            title: 'Opa!!',
+            title: 'Ops!!',
             text: 'Usuário ou senha incorreto',
-          })} else{ Swal.fire({
-            icon: 'success',
-            title: 'Bem Vindo!!',
-            showConfirmButton: false,
-            timer: 1500
-          })}
+          })
+        } else{
+            localStorage.setItem("iduser",response.data[0].id_usuario);
+            Router.push('/')
+           }
+
+          
 
     })
 
@@ -94,7 +97,7 @@ const Login = (props) => {
               </div>
   
               <div className={styles.containerloginformbtn}>
-                <button className={styles.loginformbtn}>Login</button>
+                <button  className={styles.loginformbtn}>Login</button>
               </div>
   
               <div className={styles.textcenter}>

@@ -17,11 +17,6 @@ const LeftPane = () => {
             <span>{home} Inicio</span>
             </button>
           </Link>
-          <Link href="/top" activeClassName={styles.selected}>
-          <button className="more">
-            <span>{explore} Top Memes</span>
-            </button>
-          </Link>
           <Link href="/galeria" activeClassName={styles.selected}>
           <button className="more">
             <span>{bookmarks} Galeria</span>
@@ -42,6 +37,11 @@ const LeftPane = () => {
             <span>{more} Criadores</span>
           </button>
           </Link>
+
+        <Link href="/postagem" activeClassName={styles.selected}>
+        <button className={styles.tweet}>Postar</button>
+        </Link>
+
         <Usuario/>
 
         <div className={styles.RodaPe}>

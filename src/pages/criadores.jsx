@@ -23,38 +23,10 @@ const Criadores = () => {
         <div  className={styles.caixa}>
             <a href='#memes-?'>
                 <div  className={styles.card}> 
-                <img width="400px" src="/images/hudson.jpeg" alt="HTML"/>
-                <h1> HUDSON </h1>   
+                <img width="400px" src="/images/criadores.png" alt="HTML"/>
+                   
             </div>
             </a>
-        </div>
-
-            
-            <div  className={styles.card}>
-                <a href='#impacto-memes'>
-                <div  className={styles.caixa}>
-                <img width="400px" src="https://i.pinimg.com/736x/4d/52/dd/4d52dd5d05128429831121caf456bfd3.jpg" alt="CSS"/>
-                <h1> MURILO  </h1>
-            </div>
-            </a>
-        </div>
-        
-            <div  className={styles.card}>
-                <a href='#memes-!'>
-                <div  className={styles.caixa}>
-                <img width="350px" src="https://i.pinimg.com/originals/9f/cf/02/9fcf0201af14764ced3ac28c28442cf6.png" alt="JavaScript"/>
-                <h1> RONEY  </h1>
-                </div>
-                </a>
-        </div>
-
-        <div  className={styles.card}>
-                <a href='#meme-n-1'>
-                <div  className={styles.caixa}>
-                <img width="350px" src="https://64.media.tumblr.com/7ee8881c7e82ebe873831d21f1731474/tumblr_mzv5fh4PqF1t17f6qo1_400.gifv" alt="JavaScript"/>
-                <h1> SUSANE  </h1>
-                </div>
-                </a>
         </div>
         </div>
 
@@ -62,28 +34,12 @@ const Criadores = () => {
 
         <div className={styles.texto}>
         <div  className={styles.not}>
-            <h1 id='memes-?'>HUDSON</h1>
-            <p> 
-                Um garoto despojado que apesar der meio despretencioso com relação aos comprometimentos trabalhistas,  quando preciso é rapidamente acionado e com grande destresa resolve suas obrigações. Um amante do esporte e que sabe que viveria plenamente  praticando do mesmo.     
-            </p>
+            <h1 id='memes-?'>
+
+                HUDSON  |  MURILO  |   RONEY  |   SUSANE
+            </h1>
                 
                 <div id="listaNot"  className={styles.listaNot}> </div>
-        </div>
-
-        <div  className={styles.not}>
-            <h1 id='impacto-memes'>MURILO</h1>
-            <p> </p>
-            <div id="listaNot"  className={styles.listaNot}> </div>
-        </div>
-
-        <div  className={styles.not}>
-            <h1 id='memes-!'>RONEY </h1>
-            <div id="listaNot"  className={styles.listaNot}> </div>
-        </div>
-
-        <div  className={styles.not}>
-            <h1 id='meme-n-1'>SUSANE</h1>
-            <div id="listaNot"  className={styles.listaNot}> </div>
         </div>
         </div>
    <div  className={styles.not}>

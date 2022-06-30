@@ -6,7 +6,10 @@ const Postagem = () => {
 
 
 
+
     if (typeof window !== "undefined") {
+
+
 
 
     const axios = require('axios').default;
@@ -54,6 +57,7 @@ const Postagem = () => {
         })
     }
         
+
     }
 
  const escondeModal = () => {
@@ -62,6 +66,8 @@ const Postagem = () => {
         //document.getElementById("inputSair").none;
 
     }
+
+
 
 
 
@@ -80,8 +86,10 @@ const Postagem = () => {
             <button className={styles.cancela} id="inputSair" onclick= {() => escondeModal()} >SAIR</button>
         </div>
     </div>
+
             </>
         );
+
 }
 
  

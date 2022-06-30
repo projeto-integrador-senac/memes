@@ -4,6 +4,7 @@ import Usuario from '../components/usuario';
 import Link from 'next/dist/client/link';
 import { home, explore, bookmarks, lists, profile, more } from './api/icons_teste'
 import styles from '../styles/Perfil.module.scss'
+import TopMemes from '../components/TopMemes';
 
 const LeftPane = () => {
   return (
@@ -43,6 +44,7 @@ const LeftPane = () => {
         </Link>
 
         <Usuario/>
+        <TopMemes/>
 
         <div className={styles.RodaPe}>
           <a>

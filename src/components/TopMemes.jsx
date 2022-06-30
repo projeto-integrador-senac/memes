@@ -2,10 +2,10 @@ import React from 'react';
 import { useState } from "react";
 import styles from '../styles/Top_memes.module.scss'
 
-const TopMemes = () => {
+const TopMemes = (props) => {
   return (
     <>
- <div className={styles.contener}>
+ <div className={styles.contener} style={{marginTop: props.margin ?? '0px;'}}>
     <div className={styles.caixa}>  
         
           <h1 className={styles.button}>Top Memes</h1>

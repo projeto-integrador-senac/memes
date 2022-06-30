@@ -3,19 +3,20 @@
     position: fixed;
     margin-top: -20px;
     text-align: center;
+    
 }
 .caixa{
-    border-radius: 1px;
+    border-radius: 10px;
     padding: 30px;
     margin: 20px;
     width: 350px;
-    height: 550px;
+    height: 300px;
     transition: ease-in-out 1s;
+    background: #009bb8;
+    
 }
 
-.caixa:hover{
-    color: #148bc2;
-}
+
 
 .button{
     cursor: pointer;

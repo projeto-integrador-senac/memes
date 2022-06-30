@@ -10,8 +10,10 @@ const LeftPane = () => {
   return (
     <div className={styles.leftpane}>
       <div className={styles.container}>
-        <header><Link href="/"><img className={styles.ImgMg}src="/images/icon.ico"/></Link></header>
 
+      <TopMemes margin='20px'/>
+
+        <header><Link href="/"><img className={styles.ImgMg}src="/images/icon.ico"/></Link></header>
         <nav>
           <Link href="/" activeClassName={styles.selected}>
           <button className="more">
@@ -44,7 +46,7 @@ const LeftPane = () => {
         </Link>
 
         <Usuario/>
-        <TopMemes/>
+        
 
         <div className={styles.RodaPe}>
           <a>

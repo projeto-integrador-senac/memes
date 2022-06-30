@@ -39,8 +39,7 @@ const MenuLateral = (props) => {
           </Link>
         </nav>
         
-        localStorage.id... ? postar : Faça o login para
-
+        
 
         <button onClick={Postagem} className={styles.tweet}>Postar</button>
         

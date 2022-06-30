@@ -5,64 +5,9 @@ import Swal from 'sweetalert2';
 const Postagem = () => {
 
 
-var not = [];
-var nome = [];
-
 if (typeof window !== "undefined") {
-    // browser code
-  
 
-
-function cadasNot(){
-
-   
-    var not_digi;
-    not_digi = document.getElementById("inputNot").value;
-
-   
-    var nome_digi;
-    nome_digi = document.getElementById("inputNome").value;
-
-   
-    if(not_digi.trim() == "" || nome_digi.trim() == ""){
-        Swal.fire({
-            icon: 'error',
-            title: 'OPA.. ERRO',
-            text: 'SEM NADA NÃO DÁ PRA POSTAR NÉ',
-          })
-        return
-    }
-
-
-    Swal.fire({
-        icon: 'success',
-        title: 'Boaa ',
-        text: 'Noticia Postada amigão',
-      })
-
-    
-    not.push(not_digi);
-    nome.push(nome_digi);
-
-    
-    var html = "";
-    html += "<ul>";
-    for( var i = 0; i < not.length; i++ ){
-        html += "<li> <strong>" + nome[i] + "</strong> <br> " + not[i] + "</li> <br>";
-    }
-    html += "</ul>";
-
-    
-    document.getElementById("listaNot").innerHTML = html;
-
-    
-    document.getElementById("listaEscritor").innerHTML = nome;
-
-    
-    escondeModall();
-}
-
-function mostraNoti(){
+function mostraModal(){
     document.getElementsByClassName("modal")[0].style.display = "block"
     document.getElementsByClassName("fundo")[0].style.display = "block"   
 
@@ -72,13 +17,6 @@ function mostraNoti(){
 
     document.getElementById('inputNome').focus();
 }
-
-function escondeModall(){
-    
-    document.getElementsByClassName("modal")[0].style.display = "none"
-    document.getElementsByClassName("fundo")[0].style.display = "none"
-}
-
 
     function escondeModal(){
         document.getElementsByClassName("modal")[0].style.display = "none"
@@ -130,7 +68,7 @@ function escondeModall(){
         })
     }
         
-
+}
 
 
 
@@ -152,6 +90,6 @@ function escondeModall(){
         </>
      );
 }
-}
+
  
 export default Postagem;

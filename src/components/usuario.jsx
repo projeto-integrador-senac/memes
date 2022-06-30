@@ -19,7 +19,7 @@ const Usuario = (props) => {
     <div className={styles.MenuUsuario}>
         <Link href='/'>
         <article  className={styles.voltar}>
-            <FontAwesomeIcon className={styles.icon} icon={faArrowLeft} /><p className={styles.p}>Nome do user</p>
+            <FontAwesomeIcon className={styles.icon} icon={faArrowLeft} /><p className={styles.p}>Voltar</p>
         </article>
         </Link>
 

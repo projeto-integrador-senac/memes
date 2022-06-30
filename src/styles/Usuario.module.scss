@@ -1,6 +1,6 @@
 .MenuUsuario{
     width: 600px;
-    height: 408px;
+    height: 400px;
     background-color:transparent;
     border: 2px  solid #000000;
     margin-top: 30px;
@@ -44,10 +44,14 @@
     width: fit-content;
     min-width: 100%;
     cursor: pointer;
+    align-items: center;
+    height: 2.9em;
+    padding: 0 0.3em;
 }
 .ButtonBaixo1:hover{
-    background: #7b7c7c;
-    border: #696e72;
+    color: #ffffff;
+    border-radius: 1.5em;
+    background: #2084d8;
 }
 .Menu{
     display:flex ;
@@ -58,19 +62,20 @@
 }
 .voltar{
     background-color: transparent;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 0px 15px;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .icon{
-    color: white;
+    color: rgb(0, 0, 0);
     cursor: pointer;
 }
 
 .icon:hover{
-    color: #fff;
+    color: rgb(0, 0, 0);
     border-radius: 5px;
     background: #696e72;
 }
@@ -120,7 +125,7 @@
 }
 
 .Comenta{
-    margin-top: 20px;
+    margin-top: 29px;
     margin-left: 65px;
     color: #000000;
     

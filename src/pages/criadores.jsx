@@ -63,46 +63,26 @@ const Criadores = () => {
         <div className={styles.texto}>
         <div  className={styles.not}>
             <h1 id='memes-?'>HUDSON</h1>
-            <p>  </p>
+            <p> 
+                Um garoto despojado que apesar der meio despretencioso com relação aos comprometimentos trabalhistas,  quando preciso é rapidamente acionado e com grande destresa resolve suas obrigações. Um amante do esporte e que sabe que viveria plenamente  praticando do mesmo.     
+            </p>
                 
                 <div id="listaNot"  className={styles.listaNot}> </div>
         </div>
 
         <div  className={styles.not}>
             <h1 id='impacto-memes'>MURILO</h1>
-            <p>Partindo do princípio de que memes são uma forma dos seres humanos expressarem ideias, opiniões e emoções, então é possível afirmar que são reflexos da sociedade em que o ser humano está inserido. A mensagem de um meme pode ir de uma lembrança particular que faz o criador do meme sentir vergonha a algo relacionado a filmes ou livros que um grupo de pessoas específicos se identificam.  
-
-Iris Duong (2017) se refere a memes como simples, sucintos e explícitos em suas mensagens, sendo de fácil e rápida acessibilidade, capaz de alcançar um grande público em poucos minutos, podendo assim, ser usados como ferramentas de propaganda que podem facilmente convencer e consolidar crenças que rapidamente se tornam populares entre os cibernautas.  
-
-Segundo Marcus (2017), existe diversos aspectos que podem fazer um meme ter impacto, sendo eles estilo de vida, onde um meme mostra um conhecimento compartilhado que um grupo de pessoas podem se relacionar, ética, memes que fazem outras pessoas questionarem sua própria ética, marketing/propaganda, marcas criam memes para tentar criar um vínculo ou afirmar a utilidade de seu produto para o consumidor, e por fim, política, memes criado para atacar ou enaltecer ideias ou figuras políticas  a fim de influenciar a mente de potenciais eleitores.  
-
-Independentemente de serem memes e possuírem a função principal de entreter e divertir as pessoas de maneiras inofensiva, memes também podem se tornar algo prejudicial quando usados para fazer “piadas” com temas de racismo, intolerância religiosa, homofobia, entre outros temas ofensivos para muitas pessoas e/ou grupos sociais. Outra maneira de usar memes de forma prejudicial ao ambiente virtual é quando memes são usados para divulgarem informações falsas online de forma rápida e eficaz, ajudando a reforçar Fake News, uma vez que memes são simples de fazer e rápidos de espalhar.  
-
-Por isso é sempre importante lembrar a si mesmo e a outros para não confiarem em tudo que se lê na internet, sempre procurando fontes confiáveis e verificar informações antes de passá-las a diante. </p>
+            <p> </p>
             <div id="listaNot"  className={styles.listaNot}> </div>
         </div>
 
         <div  className={styles.not}>
-            <h1 id='memes-!'>COMO MEMES SÃO CONSIDERADOS MEMES </h1>
-            <p>Will Fulton, escritor para Thrillist, escreveu em seu artigo para o site em 2017 chamado de “I Found the World's First Meme With Help From Meme Historians” (Encontrei O Primeiro Meme Do Mundo Com A Ajuda De Historiadores De Memes) desenvolveu um acrônimo para definir o que um meme tem que ter para ser considerado um meme e o chamou, convenientemente, de M.E.M.E., sendo cada sigla representação de: 
-
-Mensagem: mensagem ou referência central claramente definida que seja compreendida e relacionável por conhecimento ou experiência comumente compartilhados. 
-
-Evolução: meme não pode permanecer estático. Deve ser adotado e remixado por uma comunidade de pessoas que o adote. 
-
-Maleabilidade: deve ajudar em sua própria evolução por ter características definidas que podem ser alteradas, mantendo e preservando alguma aparência da mensagem original. 
-
-Efeito: deve atingir um certo nível de popularidade e compreensão, ou a mensagem não importará. Talvez a parte mais importante do meme seja sua viralidade (no sentido viral). 
-
-Para Marcus (2017), objetivo do meme bem-sucedido é criar engajamento por meio de likes, comentários e compartilhamento, assim outras pessoas vão replicar, se inspirar e/ou fazer outra coisa a partir desse material fonte. Marcus pontua que não existe nenhuma permanência nesse estado de popularidade. </p>
+            <h1 id='memes-!'>RONEY </h1>
             <div id="listaNot"  className={styles.listaNot}> </div>
         </div>
 
         <div  className={styles.not}>
-            <h1 id='meme-n-1'>QUAL O PRIMEIRO MEME </h1>
-            <p>Assim como seu nome, meme, memes não são um produto originado dentro da internet e não há muita documentação a respeito de qual seria o primeiro meme do mundo.  
-
-No entanto, existe uma certa concordância no que diz respeito ao primeiro meme da internet. Baby cha-cha-cha, também conhecido como bebê dançarino, é um meme do início da internet. Criado em 1996, trata-se de uma animação em 3D para testar novas habilidades do software de CGI (Computer Graphic Imagery, também conhecida como computação gráfica) do estúdio Kinetix Character Studio.</p>
+            <h1 id='meme-n-1'>SUSANE</h1>
             <div id="listaNot"  className={styles.listaNot}> </div>
         </div>
         </div>

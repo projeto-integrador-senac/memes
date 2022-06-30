@@ -16,12 +16,60 @@ const MenuLateral = (props) => {
     alteraIduser(localStorage.getItem("iduser"))
   }, [])
 
-  const Postagem = () => {
 
-    //document.querySelector(".modal").style.display = "block"
+  const axios = require('axios').default;
 
+    const cadastroPostagem = (p) => {
+
+
+        p.preventDefault()
+
+        const descricao = document.getElementById("inputDescricao").value;
+        const postagem = document.getElementById("inputMeme").value;
+        
+        const obj = {
+            descricao : descricao,
+            postagem : postagem
+        }
+
+        console.log(obj)
+
+        axios.post('http://localhost:3001/postagem', obj)
+
+        .then(function (response) {
+
+            console.log(response)
+            if(response.data == 0){
+    
+              Swal.fire({
+                icon: 'error',
+                title: 'Ops!!',
+                text: 'Usuário não cadastrado',
+            })
+            } else {
+                localStorage.setItem("iduser");
+                Router.push('/')
+            } 
+            if(postagem.trim == ""){
+            Swal.fire({
+                icon: 'error',
+                title: 'Ops!!',
+                text: 'Postagem não cadastrada.',
+            })}
+        })
+    }
+  
+        
+
+    
+
+
+
+
+  const [showMe, setShowMe] = useState(false);
+  function toggle(){
+    setShowMe(!showMe);
   }
-
   return (
     <div className={styles.leftpane}>
       <div className={styles.container}>
@@ -48,13 +96,13 @@ const MenuLateral = (props) => {
 
 
 
-          <button onClick={() => iduser ? Router.push('/galeria') : Swal.fire({text: "crie uma conta ou faça login para continuar.", footer: "<a href='/login'> Já possui uma conta? </a>"}) } >
+          <button onClick={() => iduser ? Router.push('/galeria') : Swal.fire({icon: 'warning', text: "crie uma conta ou faça login para continuar.", footer: "<a href='/login'> Já possui uma conta? </a>"}) } >
             <span>{bookmarks} Galeria</span>
           </button>
         
           
          
-          <button onClick={() => iduser ? Router.push('/perfil') : Swal.fire({text: "crie uma conta ou faça login para continuar.", footer: "<a href='/login'> Já possui uma conta? </a>"}) }>
+          <button onClick={() => iduser ? Router.push('/perfil') : Swal.fire({icon: 'warning', text: "crie uma conta ou faça login para continuar.", footer: "<a href='/login'> Já possui uma conta? </a>"}) }>
             <span>{profile} Perfil</span>
         </button>
           
@@ -65,9 +113,9 @@ const MenuLateral = (props) => {
         
         
       {iduser ?
-        <button  onClick={Postagem} className={styles.tweet}>Postar</button>
+        <button  onClick={toggle} className={styles.tweet}>Postar</button>
       :
-      <button className={styles.tweet} onClick={ () => Swal.fire({text: "crie uma conta ou faça login para continuar.", footer: "<a href='/login'> Já possui uma conta? </a>"})}  >Postar</button>
+      <button className={styles.tweet} onClick={ () => Swal.fire({icon: 'warning', text: "crie uma conta ou faça login para continuar.", footer: "<a href='/login'> Já possui uma conta? </a>"})}  >Postar</button>
       }
         
 
@@ -83,6 +131,23 @@ const MenuLateral = (props) => {
         
       </div>
       
+      <div class={styles.modal} style={{ display: showMe ? "block" : "none" }} >
+        Poste Um Meme
+        <form onSubmit={(p) => cadastroPostagem(p)}>
+            <input id="inputDescricao" placeholder="Descrição" />
+
+            <input id="inputMeme" placeholder="URL do MEME" />
+        
+        <div >
+            <button type='submit' className={styles.salvar}  >SALVAR</button>   
+            <button className={styles.cancela} id="inputSair" onClick={toggle} >VOLTAR</button>
+        </div>
+
+        </form>
+    </div>
+
+
+
     </div>
     
   )

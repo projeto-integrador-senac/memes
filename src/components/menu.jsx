@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faSearch
   } from "@fortawesome/free-solid-svg-icons";
+  import  Router  from 'next/dist/client/router';
 
 
 const Menu = (props) => {
@@ -14,6 +15,10 @@ React.useEffect(() => {
     alteraIduser(localStorage.getItem("iduser"))
 }, [])
 
+const deslogaUser = () => {
+    localStorage.removeItem("iduser")
+    window.location.reload()
+}
 
     return ( 
         <>
@@ -34,7 +39,7 @@ React.useEffect(() => {
         <nav className={styles.nav}>
             <ul className={styles.menu}>
                         { iduser ? 
-                        <button>sair</button> : 
+                        <button className={styles.sair} onClick={() => deslogaUser()} >SAIR</button> : 
                         <>
                         <li><Link href="login">Login</Link> </li>
                         <li><b>/</b> </li>

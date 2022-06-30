@@ -106,7 +106,8 @@
     border: 2px solid #000000;
     margin-top: 20px;
     padding: 0 0.3em;
-    width: 599px;
+    max-width: 599px;
+    min-width: 599px;
     height: 250px;
 }
 

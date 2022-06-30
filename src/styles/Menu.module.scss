@@ -12,7 +12,8 @@
     width: 100%;
 }
 .ImgMg{
-    height: 69px;
+    height: 140px;
+    margin-top: -27px;
 }
 .logo{
     display: inline-block;
@@ -35,7 +36,7 @@
 /* barra de pesquisa*/
 
 .div{
-   margin-top: -25px;
+   margin-top: -70px;
 }
 
 #txtBusca{
@@ -77,6 +78,28 @@
     max-height: 0;
     transition: max-height .5s ease-out;
 }
+
+.sair{
+    background: unset;
+    border: unset;
+}
+
+.sair{
+    display: block;
+    background: #51bcff;
+    color: #fff;
+    width: 14em;
+    height: 3em;
+    cursor: pointer;
+    border-radius: 1.5em;
+    font-size: 1em;
+    margin-top: 2em;
+    margin-left: 2.5em;
+  }
+
+.sair:hover {
+      background: #2aaaff;
+    }
 
 .hamb{
     cursor: pointer;

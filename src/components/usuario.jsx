@@ -1,14 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from '../styles/Usuario.module.scss';
 import Link from 'next/link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faArrowLeft} from "@fortawesome/free-solid-svg-icons"
 import TopMemes from "../components/TopMemes";
+import Router from 'next/router';
 
 
 const Usuario = (props) => {
 
     const axios = require('axios').default;
+
+    
+
+    useEffect( () => { 
+    
+        const iduser = localStorage.getItem("iduser");
+        if( !iduser ){
+            alert("Po mano, mancada em")
+            Router.push("/")
+            return;
+        }
+
+     }, [] )
 
 
 

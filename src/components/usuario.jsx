@@ -36,6 +36,8 @@ const Usuario = (props) => {
         <div>
             
             <img src='https://pbs.twimg.com/profile_images/1532112034871099392/QGRSRfSh_400x400.jpg'className={styles.FotoUser}/>
+            <button className={styles.botaoEdita}> EDITAR </button>
+        
         </div>
         <br></br>
         <div className={styles.perfil}> 

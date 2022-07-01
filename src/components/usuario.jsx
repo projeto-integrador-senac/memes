@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
+import { useState } from "react";
 import styles from '../styles/Usuario.module.scss';
 import Link from 'next/link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faArrowLeft} from "@fortawesome/free-solid-svg-icons"
-import TopMemes from "../components/TopMemes";
 import Router from 'next/router';
+import 'animate.css';
 
 
 const Usuario = (props) => {
@@ -13,19 +14,14 @@ const Usuario = (props) => {
 
     
 
-    useEffect( () => { 
     
-        const iduser = localStorage.getItem("iduser");
-        if( !iduser ){
-            alert("Po mano, mancada em")
-            Router.push("/")
-            return;
-        }
-
-     }, [] )
 
 
-
+     const [showMe, setShowMe] = useState(false);
+     function toggle(){
+       setShowMe(!showMe);
+       
+     }
 
     return ( 
 <>
@@ -53,11 +49,11 @@ const Usuario = (props) => {
             <p>descrição</p>
         </div>
         <div className={styles.ButtonBaixo}>
-            <Link href='#'>
-            <article className={styles.ButtonBaixo1}>
+            
+            <article onClick={toggle} className={styles.ButtonBaixo1}>
                 <p>Comentários</p>
             </article>
-            </Link>
+            
             <Link href='#'>
             <article className={styles.ButtonBaixo1}>
                 <p>Postagens</p>
@@ -70,7 +66,7 @@ const Usuario = (props) => {
             </Link>
         </div>
         </div>
-        <div className={styles.invisivel}>
+        <div className={styles.invisivel} class={styles.modal} style={{ display: showMe ? "block" : "none" }} >
             <article className={styles.Comentario}>
             <img src="https://pbs.twimg.com/profile_images/1532112034871099392/QGRSRfSh_400x400.jpg"/>
                 <h1 className={styles.ComentaNome}>User</h1>

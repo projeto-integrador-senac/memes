@@ -5,7 +5,7 @@ import styles from '../styles/Top_memes.module.scss'
 const TopMemes = (props) => {
   return (
     <>
- <div className={styles.contener} style={{marginTop: props.margin ?? '0px;'}}>
+ <div className={styles.contener}>
     <div className={styles.caixa}>  
         
           <h1 className={styles.button}>Top Memes</h1>

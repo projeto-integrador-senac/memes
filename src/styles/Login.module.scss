@@ -54,7 +54,7 @@
 
 .input {
   font-size: 15px;
-  color: #fff;
+  color: #ffffff;
   line-height: 1.2;
   border: none;
   display: block;
@@ -101,12 +101,12 @@
   font-family: Nunito, sans-serif;
   font-size: 15px;
   color: #999999;
-  line-height: 1.2;
+  line-height: 0;
   content: attr(data-placeholder);
-  display: block;
+  display: inline-block;
   width: 100%;
   position: absolute;
-  top: 16px;
+  top: 8px;
   left: 0px;
   padding-left: 5px;
   -webkit-transition: all 0.4s;

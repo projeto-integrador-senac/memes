@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faArrowLeft} from "@fortawesome/free-solid-svg-icons"
 import Router from 'next/router';
-import 'animate.css';
 
 
 const Usuario = (props) => {
@@ -36,7 +35,7 @@ const Usuario = (props) => {
         <div>
             
             <img src='https://pbs.twimg.com/profile_images/1532112034871099392/QGRSRfSh_400x400.jpg'className={styles.FotoUser}/>
-            <button className={styles.botaoEdita}> EDITAR </button>
+            <button className={styles.editar}> EDITAR </button>
         
         </div>
         <br></br>
@@ -52,20 +51,15 @@ const Usuario = (props) => {
         </div>
         <div className={styles.ButtonBaixo}>
             
-            <article onClick={toggle} className={styles.ButtonBaixo1}>
+            <button onClick={toggle} className={styles.more}>
                 <p>Comentários</p>
-            </article>
+            </button>
             
-            <Link href='#'>
-            <article className={styles.ButtonBaixo1}>
+            
+            <button className={styles.more2}>
                 <p>Postagens</p>
-            </article>
-            </Link>
-            <Link href='#'>
-            <article className={styles.ButtonBaixo1}>
-                <p>Curtidas</p>
-            </article>
-            </Link>
+            </button>
+            
         </div>
         </div>
         <div className={styles.invisivel} class={styles.modal} style={{ display: showMe ? "block" : "none" }} >

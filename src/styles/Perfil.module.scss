@@ -1,5 +1,5 @@
 .leftpane {
-    background: #ffffff;
+    background: transparent;
     color: rgb(252, 252, 252);
     min-height: 100vh;
     
@@ -35,7 +35,8 @@
       font-size: 1.3em;
       font-weight: 500;
       margin-left: -1em;
-      
+      background: transparent;
+      border: unset;
       
       
      
@@ -48,7 +49,8 @@
         min-width: 100%;
         padding: 0 0.7em;
         cursor: pointer;
-        
+        background: transparent;
+        border: unset;
       }
   
       &:hover span {
@@ -62,12 +64,12 @@
       color: #1da1f2;
     }
   
-    button {
-      background: unset;
+    .tweet {
+      background: transparent;
       border: unset;
     }
   
-    button.tweet {
+    .tweet {
       display: block;
       background: #1da1f2;
       color: #fff;
@@ -76,7 +78,7 @@
       border-radius: 1.5em;
       font-size: 1em;
       margin-top: 0.5em;
-      margin-left: 0em;
+      margin-left: -1em;
       cursor: pointer;
       
   

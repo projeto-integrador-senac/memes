@@ -88,7 +88,7 @@ button.more {
     width: 14em;
     height: 3em;
     font-size: 1em;
-    margin-top: -0.39em;
+    margin-top: 0.40em;
     margin-left: -0.79em;
     cursor: pointer;
 }
@@ -96,10 +96,11 @@ button.more {
     padding: 0 0.7em;
     cursor: pointer;
     border: unset;
+    transition: 0.10s;
 }
 
 .more:hover {
-    background: #1da1f2;
+    background: #1da0f252;
 
 }
 
@@ -114,7 +115,7 @@ button.more2 {
     max-width: 14em;
     height: 3em;
     font-size: 1em;
-    margin-top: -0.39em;
+    margin-top: 0.40em;
     margin-left: 0.01em;
     cursor: pointer;
 }
@@ -122,10 +123,11 @@ button.more2 {
     padding: 0 0.7em;
     cursor: pointer;
     border: unset;
+    transition: 0.10s;
 }
 
 .more2:hover {
-    background: #1da1f2;
+    background: #1da0f252;
 
 }
 //* POSTAGEM *// 
@@ -152,7 +154,7 @@ button.more2 {
 .invisivel{
     background: transparent;
     border: 2px solid #000000;
-    margin-top: -5px;
+    margin-top: 3px;
     margin-left: -2px;
     padding: 0 0.3em;
     max-width: 600px;
@@ -178,20 +180,23 @@ button.more2 {
 }
 
 .editar{
-    
-      background: #1da1f2;
-      color: #fff;
-      width: 14em;
-      height: 3em;
+      background: transparent;
+      border: #1da1f2 3px solid;
+      color: #1da1f2;
+      width: 8em;
+      height: 2.65em;
       cursor: pointer;
       border-radius: 1.5em;
       font-size: 1em;
       margin-top: 3em;
-      margin-left: 14.5em;
+      margin-left: 20.4em;
+      transition: 0.10s;
 }
 
 .editar:hover {
       background: #2aaaff;
+      border: #fff 1px solid;
+      color: #fff;
 }
 
 .ComentaNome{

@@ -3,7 +3,6 @@ import { useState } from "react";
 import Link from 'next/dist/client/link';
 import { home, explore, bookmarks, lists, profile, more, messages } from '../pages/api/icons_teste'
 import styles from '../styles/MenuLateral.module.scss'
-import Postagem from './postagem';
 import Swal from 'sweetalert2';
 import  Router  from 'next/dist/client/router';
 
@@ -19,45 +18,49 @@ const MenuLateral = (props) => {
 
   const axios = require('axios').default;
 
-    const cadastroPostagem = (p) => {
+  const cadastroPostagem = (p) => {
 
 
-        p.preventDefault()
+    p.preventDefault()
 
-        const descricao = document.getElementById("inputDescricao").value;
-        const postagem = document.getElementById("inputMeme").value;
-        
-        const obj = {
-            descricao : descricao,
-            postagem : postagem
-        }
-
-        console.log(obj)
-
-        axios.post('http://localhost:3001/postagem', obj)
-
-        .then(function (response) {
-
-            console.log(response)
-            if(response.data == 0){
+    const descricao = document.getElementById("inputDescricao").value;
+    const postagem = document.getElementById("inputMeme").value;
     
-              Swal.fire({
-                icon: 'error',
-                title: 'Ops!!',
-                text: 'Usuário não cadastrado',
-            })
-            } else {
-                localStorage.setItem("iduser");
-                Router.push('/')
-            } 
-            if(postagem.trim == ""){
-            Swal.fire({
-                icon: 'error',
-                title: 'Ops!!',
-                text: 'Postagem não cadastrada.',
-            })}
-        })
+    const obj = {
+        id_usuario : localStorage.getItem("iduser"),
+        descricao : descricao,
+        postagem : postagem
     }
+
+
+    console.log(obj)
+
+    axios.post('http://localhost:3001/postagem', obj)
+
+    .then(function (response) {
+
+        console.log(response)
+        if(response.data == 0){
+
+          Swal.fire({
+            icon: 'error',
+            title: 'Ops!!',
+            text: 'Usuário não cadastrado',
+        })
+        } else {
+            Router.push('/')
+        } 
+        if(postagem.trim == ""){
+        Swal.fire({
+            icon: 'error',
+            title: 'Ops!!',
+            text: 'Postagem não cadastrada.',
+        })}
+    })
+
+    
+
+}
   
         
 
@@ -118,8 +121,6 @@ const MenuLateral = (props) => {
       <button className={styles.tweet} onClick={ () => Swal.fire({icon: 'warning', text: "crie uma conta ou faça login para continuar.", footer: "<a href='/login'> Já possui uma conta? </a>"})}  >Postar</button>
       }
         
-
-        <Postagem/>
 
         <div className={styles.RodaPe}>
           <a>

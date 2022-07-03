@@ -74,7 +74,7 @@ const Inicio = () => {
                     	
                     </div>
                     <div className={styles.post}>
-                    	<Link href={{ pathname: "/comentarios/", query:{ id_usuario: u.ID} }}>
+                    	<Link href={{ pathname: "/comentarios/", query:{ id_usuario: u.id_usuario, id_post: u.ID} }}>
                     		
 							<img src={`${u.PUBLICACAO}`} />
                     	</Link> 

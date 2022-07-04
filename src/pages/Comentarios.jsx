@@ -14,66 +14,70 @@ const Comentarios = () => {
 
     const router = useRouter()
 
-    const [post, alteraPost] = React.useState([]);
+    const [post, alteraPost] = React.useState(null);
     const [comentario, alteraComentario] = React.useState([]);
 
     const axios = require('axios').default;
 
+    
+    const buscaPostagem = ( id_post ) => {
 
-    React.useEffect(() => {
+        axios.get(`http://localhost:3001/post/${id_post}`)
+        .then(function (response) {
 
-        const id_usuario = router.query.id_usuario;
-        console.log(id_usuario)
+            const postagem = response.data;
+            alteraPost(postagem[0]);
+            
+        })
 
-        axios.get(`http://localhost:3001/comentario/${id_usuario}`)
+        .catch(function (error) {
+            console.log("DEU ERRO MANO")
+            console.log(error);
+        })
 
-            .then(function (response) {
+    }
 
-                const coments = response.data;
-                alteraComentario(coments);
-                console.log(response)
-            })
+    const buscaComentarios = ( id_post ) => {
 
-            .catch(function (error) {
-                console.log(error);
-            })
+        axios.get(`http://localhost:3001/comentario/${id_post}`)
+        .then(function (response) {
 
-    }, [])
+            const coments = response.data;
+            console.log(coments) 
+
+            alteraComentario(coments);
+
+        })
+
+        .catch(function (error) {
+            console.log(error);
+        })
+
+    }
 
 
     React.useEffect(() => {
 
         const id_post = router.query.id_post;
-        console.log(id_post)
-
-
-        axios.get(`http://localhost:3001/post/${id_post}`)
-
-            .then(function (response) {
-
-                const postagem = response.data;
-                alteraPost(postagem);
-                console.log(response)
-            })
-
-            .catch(function (error) {
-                console.log(error);
-            })
+        
+        buscaPostagem(id_post);
+        buscaComentarios(id_post);
 
     }, [])
 
 
+
     const cadastraComentario = (C) => {
 
+        C.preventDefault()
 
-        p.preventDefault()
-
+        const id_post = router.query.id_post;
         const postacomentario = document.getElementById("inputComentario").value;
 
 
         const obj = {
             id_usuario: localStorage.getItem("iduser"),
-            id_post: localStorage.getItem("idpost"),// fazer isso 
+            id_post: id_post,
             texto: postacomentario
         }
         console.log(obj)
@@ -91,16 +95,9 @@ const Comentarios = () => {
                         text: 'Usuário não cadastrado',
                     })
                 } else {
-                    localStorage.setItem("idpost", response.data[0].id_post);
-                    Router.push(`/comentarios/${id_usuario}`)
+                    buscaComentarios(id_post);
                 }
-                if (postagem.trim == "") {
-                    Swal.fire({
-                        icon: 'error',
-                        title: 'Ops!!',
-                        text: 'Comentário invalido.',
-                    })
-                }
+                
             })
     }
 
@@ -125,109 +122,76 @@ const Comentarios = () => {
                 </Link>
 
                 <div>
-                  
-                    {comentario == 0
-                        ?
-                        <div>  
-                            {comentario.map(p => {
-                                return(
-                                    <img className={styles.imagemPost} src={`${p.postagem}`} />
-                                )
-                            })
-
-                            }
                     
-                            {post.map(u => {
-                                    return (
-                                        <>
-                                            <article className={styles.browser}>
-                                                <div className={styles.conteudo}>
-                                                    <img className={styles.imagem} src={`${u.foto_perfil}`} />
-                                                    <a className={styles.nome}>{u.Nome}</a>
-                                                    <a className={styles.user}>@{u.UserName}</a>
-                                                </div>
+                    { 
+                        post 
+                        ?
+                            <div>  
+                                        
+                                <article className={styles.browser}>
+                                    <div className={styles.conteudo}>
+                                        <img className={styles.imagem} src={`${post.foto_perfil}`} />
+                                        <a className={styles.nome}>{post.Nome}</a>
+                                        <a className={styles.user}>@{post.UserName}</a>
+                                    </div>
 
-                                                <section className={styles.post}>
-                                                    <p> {u.descricao} </p>
-                                                </section>
-                                                <div className={styles.data}>
-                                                    <p>{u.feito_em}</p>
-                                                </div>
-                                                <hr className={styles.hr} />
-                                                <div className={styles.numerosPost}>
-                                                    <h5>600.000</h5>
-                                                    <p>Curtidas</p>
-                                                </div>
-                                                <hr className={styles.hr} />
-                                                <form onSubmit={(C) => cadastraComentario(C)} >
-                                                    <input id="inputComentario" placeholder="Digite seu comentário" />
-                                                    <div>
-                                                        <button type='submit' > Comentar </button>
-                                                        <button onClick={toggle}> Voltar </button>
-                                                    </div>
-                                                </form>
-                                            </article>
+                                    <section className={styles.post}>
+                                        <p> {post.descricao} </p>
+                                        <img className={styles.imagemPost} src={`${post.PUBLICACAO}`} />
+                                    </section>
+                                    <div className={styles.data}>
+                                        <p>{post.feito_em}</p>
+                                    </div>
+                                    <hr className={styles.hr} />
+                                    <div className={styles.numerosPost}>
+                                        <h5>600.000</h5>
+                                        <p>Curtidas</p>
+                                    </div>
+                                    <hr className={styles.hr} />
+                                    <form onSubmit={(C) => cadastraComentario(C)} >
+                                        <input required  id="inputComentario" placeholder="Digite seu comentário" />
+                                        <div>
+                                            <button > Comentar </button>
+                                        </div>
+                                    </form>
+                                </article>
 
-
-                                        </>
-                                    )
-
-                            })
-                            }
-
-
-                        </div>
+                            </div>
                         :
+                        <p>Carregando...</p>
+                    }
+                        
+
+                    {
+                        comentario == 0
+                        ?
+                        <p> Essa publicação não possui comentários. </p>
+                        :
+                    
                         <div>
                             {comentario.map(c => {
-                                // if (u.ID == c.ID){
-
                                 return (
-                                    <>
-                                        <article className={styles.browser}>
+                                    <article>
+                                        <hr className={styles.hr} />
+                                        <div>
                                             <div className={styles.conteudo}>
                                                 <img className={styles.imagem} src={`${c.foto_perfil}`} />
-                                                <a className={styles.nome}>{c.nomepost}</a>
-                                                <a className={styles.user}>{c.nikipost}</a>
+                                                <a className={styles.nome}>{c.nome}</a>
+                                                <a className={styles.user}>{c.nome_usuario}</a>
                                             </div>
-
-                                            <section className={styles.post}>
-                                                <p> {c.descricao} </p>
-                                            </section>
-                                            <div className={styles.data}>
-                                                <p>{c.feito_em}</p>
-                                            </div>
-                                            <hr className={styles.hr} />
-                                            <div className={styles.numerosPost}>
-                                                <h5>600.000</h5>
-                                                <p>Curtidas</p>
-                                            </div>
-                                            <hr className={styles.hr} />
                                             <div>
-                                                <div className={styles.conteudo}>
-                                                    <img className={styles.imagem} src={`${c.foto_perfil}`} />
-                                                    <a className={styles.nome}>{c.nome}</a>
-                                                    <a className={styles.user}>{c.nome_usuario}</a>
-                                                </div>
-                                                <div>
-                                                    <p>{c.comentario}</p>
-                                                    <p>{c.data_comentario}</p>
-                                                </div>
+                                                <p>{c.comentario}</p>
+                                                <p>{c.data_comentario}</p>
                                             </div>
-                                            <form onSubmit={(C) => cadastraComentario(C)} >
-                                                <input id="inputComentario" placeholder="Digite seu comentário" />
-                                                <div>
-                                                    <button type='submit' > Comentar </button>
-                                                    <button onClick={toggle}> Voltar </button>
-                                                </div>
-                                            </form>
-                                        </article>
-                                    </>
+                                        </div>
+                                    </article>
                                 )
 
                             })}
                         </div>
+
                     }
+
                 </div>
             </article>
         </>

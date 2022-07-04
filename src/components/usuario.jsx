@@ -5,99 +5,123 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons"
 import Router from 'next/router';
+import Post from '../components/post'
 
 
 const Usuario = (props) => {
 
+    const [usuario, mostraPerfil] = React.useState(null);
+    const [postagens, postagemUsuario] = React.useState([]);
 
-    const [showMe, setShowMe] = useState(false);
-    function toggle() {
-        setShowMe(!showMe);
 
-        const [usuariu, mostraPerfil] = React.useState([]);
+
+    const mostraUsuario = (id_usuario) => {
+
         const axios = require('axios').default;
+        axios.get(`http://localhost:3001/perfil/usuario/${id_usuario}`)
 
 
-        React.useEffect(() => {
+            .then(function (response) {
 
-            axios.get('http://localhost:3001/perfil/usuario')
+                const profile = response.data;
+                //console.log(response);
+                mostraPerfil(profile[0]);
 
-                .then(function (response) {
+            })
 
-                    const profile = response.data;
-                    mostraPerfil(profile);
-                    console.log(response)
-                })
-
-                .catch(function (error) {
-                    console.log(error);
-                })
-
-        }, [])
-
+            .catch(function (error) {
+                console.log(error);
+            })
 
     }
+
+    const mostraPostagem = (id_usuario) => {
+
+        const axios = require('axios').default;
+        axios.get(`http://localhost:3001/perfil/postagem/${id_usuario}`)
+
+
+            .then(function (response) {
+
+                const profile = response.data;
+                console.log(response);
+                postagemUsuario(profile);
+
+            })
+
+            .catch(function (error) {
+                console.log(error);
+            })
+
+    }
+
+    React.useEffect(() => {
+
+        const id_usuario = localStorage.getItem("iduser");
+
+        mostraUsuario(id_usuario);
+
+        mostraPostagem(id_usuario);
+
+    }, [])
 
     return (
         <>
             <div style={{ marginTop: props.margin ?? '-481px' }} >
 
-                 {/** 
 
-                {usuariu == 0
+
+                {usuario == null
                     ?
                     <p>loading...</p>
                     :
-                    {usuariu.map (p => {
-                        return(
-                            <>
-                                <div className={styles.MenuUsuario}>
-                                    <Link href='/'>
-                                        <article className={styles.voltar}>
-                                            <FontAwesomeIcon className={styles.icon} icon={faArrowLeft} /><p className={styles.p}>Voltar</p>
-                                        </article>
-                                    </Link>
-                                    <img src={`${p.foto_perfil}`} className={styles.FotoUser} />
-                                    <button className={styles.editar}> EDITAR </button>
+
+
+                    <div>
+                        <div className={styles.MenuUsuario}>
+                            <Link href='/'>
+                                <article className={styles.voltar}>
+                                    <FontAwesomeIcon className={styles.icon} icon={faArrowLeft} /><p className={styles.p}>Voltar</p>
+                                </article>
+                            </Link>
+                            <img src={`${usuario.foto_perfil}`} className={styles.FotoUser} />
+                            <button className={styles.editar}> EDITAR </button>
+                        </div>
+
+                        <br></br>
+                        <div className={styles.perfil}>
+                            <div className={styles.NomeUsuario}>
+                                <h1>{usuario.nome}</h1>
+                                <div className={styles.NomeUser}>
+                                    <p>{usuario.nome_usuario}</p>
                                 </div>
-
-                                <br></br>
-                                <div className={styles.perfil}>
-                                    <div className={styles.NomeUsuario}>
-                                        <h1>{p.nome}</h1>
-                                        <div className={styles.NomeUser}>
-                                            <p>{p.nome_usuario}</p>
-                                        </div>
-                                    </div>
-                                    <div className={styles.DescricaoUsuario}>
-                                        <p>{p.descricao}</p>
-                                    </div>
-                                </div>
-                            </>
-                        )})
-                    }
-                }*/}
-                <div className={styles.perfil}>
-                    <div className={styles.ButtonBaixo}>
-
-                        <button onClick={toggle} className={styles.more}>
-                            <p>Comentários</p>
-                        </button>
-
-
-                        <button className={styles.more2}>
-                            <p>Postagens</p>
-                        </button>
-
+                            </div>
+                            <div className={styles.DescricaoUsuario}>
+                                <p>{usuario.descricao}</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                }
 
+                <p>Postagens</p>
 
-
-
-                <div className={styles.invisivel} class={styles.modal} style={{ display: showMe ? "block" : "none" }} >
+                <div className={styles.invisivel} class={styles.modal}  >
                     <article className={styles.Comentario}>
-                        <img src="https://pbs.twimg.com/profile_images/1532112034871099392/QGRSRfSh_400x400.jpg" />
+                        {postagens == 0
+                            ?
+                            <p>Poste alguma coisa</p>
+                            :
+                            postagens.map(u => {
+                                return (
+
+                                    <Link href={{ pathname: "/comentarios/", query: { id_post: u.id_post } }}>
+
+                                        <img src={`${u.postagem}`} />
+                                    </Link>
+
+                                )
+                            })}
+
 
                     </article>
                 </div>
